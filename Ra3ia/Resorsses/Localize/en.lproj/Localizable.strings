@@ -1,0 +1,72 @@
+/* 
+  Localizable.strings
+  BeepBeep
+
+  Created by Sara Ashraf on 1/6/19.
+  Copyright © 2019 Sara Ashraf. All rights reserved.
+*/
+ 
+ 
+
+"Please enter the Mobile number and password" = "Please enter the Mobile number and password" ;
+"Email and Password are required !" = "Email and Password are required !" ;
+"Password and confirm password must be match. " = "Password and confirm password must be match. " ;
+"Please complete your data" = "Please complete your data" ;
+"You must agree to the terms and conditions first" = "You must agree to the terms and conditions first" ;
+
+
+//MARK: - authentication part
+
+//login screen
+"phone number" = "phone number";
+"Password" = "Password";
+"forget password ?" = "forget password ?";
+"Login" = "Login";
+"create new account ?" = "create new account ?";
+
+
+
+// register screen
+"First name" = "First name";
+"Last name" = "Last name";
+"Email" = "Email";
+"Date of Birth" = "Date of Birth";
+"phone number" = "phone number" ;
+"Password" = "Password" ;
+"Retype Password" = "Retype Password" ;
+"Register" = "Register" ;
+"Type" = "Type" ;
+"Specialization" = "Specialization" ;
+"First Name" = "First Name" ;
+"Phone Number" = "Phone Number" ;
+"Address" = "Address" ;
+"Password" = "Password" ;
+"Confirm password" = "Confirm password" ;
+"Registering Means, you agree to" = "Registering Means, you agree to" ;
+"Next" = "Next" ;
+"have Account? login" = "have Account? login" ;
+"Enter Car Type" = "Enter Car Type" ;
+"vehicle picture" = "vehicle picture" ;
+"ID picture" = "ID picture" ;
+"driving license picture" = "driving license picture" ;
+"Personal Photo" = "Personal Photo" ;
+"Register" = "Register" ;
+
+
+// activation screen
+"Activation Code" = "Activation Code" ;
+"I didn't receive the code" = "I didn't receive the code" ;
+"Confirm" = "Confirm" ;
+"mobile Number" = "mobile Number"  ;
+"New password" = "New password" ;
+"verification code" = "verification code" ;
+"Confirm new password" = "Confirm new password" ;
+"Confirm" = "Confirm" ;
+"Select Address" = "Select Address" ;
+"verification code" = "verification code" ;
+"New password" = "New password" ;
+"Confirm new password" = "Confirm new password" ;
+"Confirm" = "Confirm" ;
+
+
+

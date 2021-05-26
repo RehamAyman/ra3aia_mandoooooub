@@ -1,0 +1,64 @@
+/* 
+  Localizable.strings
+  BeepBeep
+
+  Created by Sara Ashraf on 1/6/19.
+  Copyright © 2019 Sara Ashraf. All rights reserved.
+*/
+ 
+ 
+"Please enter the Mobile number and password" = "برجاء ادخال رقم الهاتف و كلمة المرور .. " ;
+"Email and Password are required !" = "برجاء ادخال رقم الهاتف و كلمة المرور ! " ;
+"Password and confirm password must be match. " = "يجب أن تكون كلمة المرور وتأكيد كلمة المرور متطابقتين." ;
+"Please complete your data" ; "برجاء اكمال بياناتك " ;
+
+"You must agree to the terms and conditions first" = "عليك الموافقة علي الشروط والاحكام اولا" ;
+
+
+//login screen
+"phone number" = "رقم الجوال ";
+"Password" = "كلمة المرور";
+"forget password ?" = "هل نسيت كلمة المرور ؟";
+"create new account ?" = "ليس لديك حساب؟ سجل الان";
+
+
+// register screen
+"First name" = "الاسم الاول";
+"Last name" = "الاسم الاخير";
+"Email" = "البريد الالكتروني";
+"Date of Birth" = "تاريخ الميلاد";
+"phone number" = "رقم الجوال" ;
+"Password" = "كلمة المرور" ;
+"Retype Password" = "تأكيد كلمة المرور" ;
+"Register" = "تسجيل " ;
+"Type" = "النوع" ;
+"Specialization" = "التخصص " ;
+"First Name" = "الاسم الاول" ;
+"Phone Number" = "رقم الجوال" ;
+"Address" = "العنوان" ;
+"Password" = "كلمة المرور" ;
+"Confirm password" = "تأكيد كلمة المرور" ;
+"Registering Means, you agree to" = "بتسجيلك في التطبيق فانت موافق علي الشروط و الاحكام" ;
+"Next" = "التالي" ;
+"have Account? login" = "هل لديك حساب ؟ تسجيل الدخول" ;
+"Enter Car Type" = "ادخل نوع السيارة" ;
+"vehicle picture" = "صورة المركبة" ;
+"ID picture" = "صورة الهوية" ;
+"driving license picture" = "صورة رخصه القيادة" ;
+"Personal Photo" = "صورة شخصيه" ;
+"Register" = "تسجيل الدخول" ;
+
+// activation screen
+"Activation Code" = "كود التفعيل" ;
+"I didn't receive the code" = "لم يصلني الكود" ;
+"Confirm" = "تأكيد" ;
+"mobile Number" = "رقم الجوال"  ;
+"New password" = "كلمة المرور الجديدة" ;
+"verification code" = "كود التفعيل " ;
+"Confirm new password" = "تأكيد كلمة المرور الجديدة" ;
+"Confirm" = "تأكيد" ;
+"Select Address" = "اختر العنوان" ;
+"verification code" = "كود التفعيل " ;
+"New password" = "كلمة المرور الجديدة" ;
+"Confirm new password" = "تأكيد كلمة المرور" ;
+"Confirm" = "تأكيد" ;

@@ -1,0 +1,6 @@
+framework module Stickerpipe {
+  umbrella header "StickerPipe-umbrella.h"
+
+  export *
+  module * { export * }
+}
