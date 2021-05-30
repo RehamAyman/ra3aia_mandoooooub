@@ -151,12 +151,12 @@ extension personalInfoVC : personalinfoView {
     func makeIsEditble(){
         self.userNameTxtField.isUserInteractionEnabled = true
         self.emailTXtField.isUserInteractionEnabled = true
-        self.phoneNumTxtField.isUserInteractionEnabled = true
+        //self.phoneNumTxtField.isUserInteractionEnabled = true
         self.lastNameTextField.isUserInteractionEnabled = true
        
         self.userNameTxtField.layer.borderColor = UIColor.lightGray.cgColor
         self.emailTXtField.layer.borderColor = UIColor.lightGray.cgColor
-        self.phoneNumTxtField.layer.borderColor = UIColor.lightGray.cgColor
+       // self.phoneNumTxtField.layer.borderColor = UIColor.lightGray.cgColor
         self.lastNameTextField.layer.borderColor = UIColor.lightGray.cgColor
         
         self.userNameTxtField.placeholder = "enter new user name ".localized()
@@ -164,7 +164,7 @@ extension personalInfoVC : personalinfoView {
         self.phoneNumTxtField.placeholder = "enter new email".localized()
         self.userNameTxtField.layer.applySketchShadow()
         self.lastNameTextField.layer.applySketchShadow()
-        self.phoneNumTxtField.layer.applySketchShadow()
+       // self.phoneNumTxtField.layer.applySketchShadow()
         self.emailTXtField.layer.applySketchShadow()
         
         

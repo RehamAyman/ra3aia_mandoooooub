@@ -14,7 +14,13 @@ protocol OrdersView: class {
     func showIndicator()
     func hideIndicator()
     func showError(error: String )
-    func selectOrderDetils(id : Int)
+//    func selectOrderDetils(id : Int)
+//    func gotoShipmentDetails(id: Int )
+//    func goToClincShipmentDetails(id : Int )
+    
+    
+  func goToShipment(id: Int )
+    func goToCLinicSHipment( id : Int)
  
 }
 
@@ -27,8 +33,10 @@ func SetAnimalType ( AnimalType : String)
     
     
     
-func configoddCells()
-func configevenCells()
+
+    func configCitiesDelivery()
+    func ConfigOtherRequests()
+
 }
 
 
@@ -74,6 +82,11 @@ class OrdersVCPresenter{
         cell.SetDate(date: "Date: \(currentRequestsArray[index].created_at)".localized())
         cell.setFromLocation(location: "From: \(currentRequestsArray[index].receive_address)".localized())
         cell.setToLocation(Location: "To: \(currentRequestsArray[index].deliver_address)".localized())
+        if currentRequestsArray[index].type == "intercity_delivery" {
+            cell.configCitiesDelivery()
+        } else {
+            cell.ConfigOtherRequests()
+        }
       
     }
     func configCompletedcells( cell : OrdersDetailsCell , for index : Int) {
@@ -81,6 +94,12 @@ class OrdersVCPresenter{
         cell.setFromLocation(location: "From: \(completedOrdersArray[index].receive_address)".localized())
         cell.setToLocation(Location: "To: \(completedOrdersArray[index].deliver_address)".localized())
         cell.SetDate(date: "Date: \(completedOrdersArray[index].created_at)".localized())
+        
+        if completedOrdersArray[index].type == "intercity_delivery" {
+            cell.configCitiesDelivery()
+        } else {
+            cell.ConfigOtherRequests()
+        }
     }
     
     
@@ -120,12 +139,64 @@ class OrdersVCPresenter{
     
     
     func didSelectRow(index:Int,type:String){
-        if(type == "current"){
-            self.view?.selectOrderDetils(id: self.currentRequestsArray[index].id)
-        }else if (type == "completed"){
-            self.view?.selectOrderDetils(id: self.completedOrdersArray[index].id)
+        if  type == "current" && currentRequestsArray[index].type == "intercity_delivery" {
+            self.view?.goToShipment(id: self.currentRequestsArray[index].id)
+        } else if   type == "completed" && completedOrdersArray[index].type == "intercity_delivery" {
+            self.view?.goToShipment(id: self.completedOrdersArray[index].id)
+            
+        } else if  (type == "completed") {
+            self.view?.goToCLinicSHipment(id: completedOrdersArray[index].id)
+        } else if type == "current" {
+            
+            self.view?.goToCLinicSHipment(id: currentRequestsArray[index].id)
         }
-
+        
+        
+        
+        
+       
+        
     }
+//    func DidSelectRowCurrent (index : Int ) {
+//
+//        // التوصيل بين المدن
+//        // large vc with collection
+//
+//        if self.currentRequestsArray[index].type == "intercity_delivery" {
+//        self.view?.gotoShipmentDetails(id:  self.currentRequestsArray[index].id)
+//
+//
+//        }  else  {
+//
+//              // مستلزمات الحيوان
+//            // small vc without  collection
+//            self.view?.goToClincShipmentDetails(id : self.currentRequestsArray[index].id)
+//
+//
+//        }
+//    }
+//
+//
+//    func DidSelectRowCompleted (index : Int ) {
+//
+//        // التوصيل بين المدن
+//        // large vc with collection
+//
+//        if self.completedOrdersArray[index].type == "intercity_delivery" {
+//        self.view?.gotoShipmentDetails(id:  self.completedOrdersArray[index].id)
+//
+//
+//
+//
+//
+//        } else   {
+//
+//              // مستلزمات الحيوان
+//            // small vc without  collection
+//            self.view?.goToClincShipmentDetails(id : self.completedOrdersArray[index].id)
+//
+//
+//        }
+//    }
     
 }

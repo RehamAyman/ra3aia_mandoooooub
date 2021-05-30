@@ -14,6 +14,9 @@ import UserNotifications
 import FirebaseInstanceID
 import FirebaseMessaging
 import SwiftyJSON
+import CoreLocation
+import MapKit
+
 
 
 @UIApplicationMain
@@ -33,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarTintColor = UIColor.BasicColor
         self.setUpSegment()
+        self.location?.requestAlwaysAuthorization()
+        self.location?.requestWhenInUseAuthorization()
         application.registerForRemoteNotifications()
         FirebaseApp.configure()
         Messaging.messaging().delegate = self

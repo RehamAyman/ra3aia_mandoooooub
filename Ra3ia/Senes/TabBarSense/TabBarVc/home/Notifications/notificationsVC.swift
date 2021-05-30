@@ -10,7 +10,7 @@ import UIKit
 class notificationsVC: UIViewController {
     
     
-    var presenter : NotificatioVCpresenter!
+    var presnter:NotificatonPresenter!
     //MARK:- OUTLETS
     
     @IBOutlet weak var tableview: UITableView!
@@ -22,9 +22,10 @@ class notificationsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter = NotificatioVCpresenter(view: self)
-        presenter.viewDidLoad()
+        presnter = NotificatonPresenter(view: self)
+        self.SetUpTableview()
+        presnter.viewWillApper()
+     
         
         
     }

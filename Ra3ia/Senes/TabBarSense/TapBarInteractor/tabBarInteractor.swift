@@ -17,7 +17,7 @@ enum TabBarinteractor: URLRequestBuilder {
     case UpdateProfile(fname:String,lname:String,email:String,phone:String )
     case ShipmentDetails ( id : Int)
     case acceptOrder( id : Int)
-    case sendOffer (id : Int , privatePrice : String , commonPrice : String , date : String , time : String)
+    case sendOffer (id : String , privatePrice : String , commonPrice : String , date : String , time : String , notes : String)
     case orders
     case bankAccounts
     case addBankAccount(bankName : String , accNumber : String , ibanNumber : String )
@@ -27,6 +27,11 @@ enum TabBarinteractor: URLRequestBuilder {
     case changeOrderStatus ( id : String , status : String)
     case finishOrder ( id : String)
     case withdrawal ( id : String , reason : String)
+    case notifications
+    case delegateSingleRoom(id:Int)
+    case deleteBank( id : Int)
+    case updatePassword( current_password : String , password : String )
+    
 
     
   
@@ -80,6 +85,14 @@ enum TabBarinteractor: URLRequestBuilder {
             return .finishOrder
         case .withdrawal:
             return .withdrawal
+        case .notifications:
+            return .notifications
+        case .delegateSingleRoom:
+            return .delegateSingleRoom
+        case .deleteBank:
+            return .deleteBank
+        case .updatePassword:
+            return .updatePassword
             
             
             
@@ -96,7 +109,7 @@ enum TabBarinteractor: URLRequestBuilder {
         
         // 3
 
-        case .rate,.social,.about , .agreaments , .wallet , .profile , .delegateHome , .ShipmentDetails , .orders, .bankAccounts , .FinAccount , .rooms:
+        case .rate,.social,.about , .agreaments , .wallet , .profile , .delegateHome , .ShipmentDetails , .orders, .bankAccounts , .FinAccount , .rooms , .notifications , .delegateSingleRoom :
             break
           
         case .UpdateProfile(fname: let fname , lname: let lname, email: let email, phone: let phone):
@@ -119,12 +132,14 @@ enum TabBarinteractor: URLRequestBuilder {
         case .acceptOrder(id: let  id ):
             params["id"] = id
             
-        case.sendOffer(id: let id , privatePrice: let privatePrice, commonPrice: let commonPrice , date: let date, time: let time):
+        case.sendOffer(id: let id , privatePrice: let privatePrice, commonPrice: let commonPrice , date: let date, time: let time , notes : let notes):
         params["id"] = id
         params["private_transportation_price"] = privatePrice
         params["common_transportation_price"] = commonPrice
         params["date"] = date
         params["time"] = time
+        params["notes"] = notes
+            
             
             
         case .addBankAccount(bankName: let bankName, accNumber: let accNumber, ibanNumber: let ibanNumber):
@@ -142,6 +157,14 @@ enum TabBarinteractor: URLRequestBuilder {
         case .withdrawal(id: let id , reason: let reason):
             params["id"] = id
             params["reason"] = reason
+            
+        case .deleteBank(id: let id ):
+        params["id"] = id
+        case .updatePassword(current_password: let current_password , password: let password ):
+            params["current_password"] = current_password
+            params["password"] = password
+            
+        
           
             
         }
@@ -156,6 +179,8 @@ enum TabBarinteractor: URLRequestBuilder {
     internal var insideUrlParam: [String]?{
         switch self {
         case .ShipmentDetails(id: let id ):
+            return ["\(id)"]
+        case .delegateSingleRoom(id:let id):
             return ["\(id)"]
       
        
@@ -189,7 +214,7 @@ enum TabBarinteractor: URLRequestBuilder {
     // 4
     internal var method: HTTPMethod {
         switch self {
-        case .rate,.social,.about,.agreaments, .wallet , .profile , .delegateHome , .ShipmentDetails, .orders , .bankAccounts , .FinAccount , .rooms:
+        case .rate,.social,.about,.agreaments, .wallet , .profile , .delegateHome , .ShipmentDetails, .orders , .bankAccounts , .FinAccount , .rooms , .notifications , .delegateSingleRoom :
             return .get
         default:
             return .post
@@ -201,7 +226,7 @@ enum TabBarinteractor: URLRequestBuilder {
     
     internal var encoding: ParameterEncoding {
         switch self {
-        case .about,.agreaments,.social , .rate , .wallet , .profile , .delegateHome , .ShipmentDetails , .acceptOrder , .orders , .bankAccounts , .FinAccount , .rooms :
+        case .about,.agreaments,.social , .rate , .wallet , .profile , .delegateHome , .ShipmentDetails , .acceptOrder , .orders , .bankAccounts , .FinAccount , .rooms , .notifications , .delegateSingleRoom:
             return URLEncoding.default
             
             

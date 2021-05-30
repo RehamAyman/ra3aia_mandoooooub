@@ -11,9 +11,14 @@ import ViewAnimator
 
 
 extension DeliveryReqVC : DeliveryRegView {
+    // small one
     func goToClincShipmentDetails(id: String) {
         let vc = Storyboard.Main.viewController(animalShipmentDetails.self)
         vc.id = id
+        
+        vc.isHomeSelected = true
+        vc.isOrderSelected = false
+        vc.completedOrderSelected = false
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -27,8 +32,10 @@ extension DeliveryReqVC : DeliveryRegView {
     }
     
     func gotoShipmentDetails(id: String) {
+        // el twseel ben el modon details
          let vc = Storyboard.Main.viewController(ShipmentdetailsVC.self)
            vc.id = id
+        vc.isOrderSelected = false
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

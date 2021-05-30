@@ -14,8 +14,10 @@ extension bankAccountsVC : UITableViewDataSource , UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "bankAccountCell", for: indexPath) as! bankAccountCell
-       // presenter.configureBankCells(cell: cell, for: indexPath.row)
-    
+       presenter.configureBankCells(cell: cell, for: indexPath.row)
+        cell.delteAction = {
+            self.presenter.deleteLoctionAction(index: indexPath.row)
+        }
         
         
         

@@ -9,11 +9,12 @@ import UIKit
 
 class sendOfferVC: UIViewController {
     var presenter : sendOfferPresenter!
-    var id = 0
+    var id = ""
     
 
     @IBOutlet weak var sendOutlet: UIButton!
     
+    @IBOutlet weak var notes: UITextView!
     @IBOutlet weak var commonTransportPrice: EditableTextField!
     @IBOutlet weak var privatePrice: EditableTextField!
     
@@ -23,8 +24,9 @@ class sendOfferVC: UIViewController {
         super.viewDidLoad()
          presenter = sendOfferPresenter(view: self)
         presenter.viewDidLoad()
+        print("====================================send offer ")
         
-        
+        print(id)
       
     }
     
@@ -39,7 +41,7 @@ class sendOfferVC: UIViewController {
         presenter.gotoSelectTime()
     }
     @IBAction func sendButton(_ sender: UIButton) {
-        presenter.sendOffer(id: id, commonPrice: commonTransportPrice.text ?? "", privatePrice: privatePrice.text ?? "", time: timeTextField.text ?? "" , date: selectDateTXTfield.text ?? "" )
+        presenter.sendOffer(id: self.id, commonPrice: commonTransportPrice.text ?? "", privatePrice: privatePrice.text ?? "", time: timeTextField.text ?? "" , date: selectDateTXTfield.text ?? "" , notes: notes.text ?? ""  )
     }
     
     @IBAction func back(_ sender: UIButton) {

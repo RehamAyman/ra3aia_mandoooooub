@@ -19,11 +19,6 @@ protocol sendOfferView : class {
     
 }
 
-
-
-
-
-
 class sendOfferPresenter {
     
     private weak var view : sendOfferView?
@@ -31,10 +26,7 @@ class sendOfferPresenter {
     init(view : sendOfferView) {
         self.view = view
     }
-    
-    
-    
-    
+   
     func gotoSeelectData() {
         self.view?.goSelectDate()
     }
@@ -47,9 +39,9 @@ class sendOfferPresenter {
         self.view?.MakeBtnRound()
     }
     
-    func sendOffer(id : Int , commonPrice : String , privatePrice : String , time : String , date : String ){
+    func sendOffer(id : String , commonPrice : String , privatePrice : String , time : String , date : String , notes : String){
         view?.showIndicator()
-        TabBarinteractor.sendOffer(id: id, privatePrice: privatePrice, commonPrice: commonPrice, date: date, time: time).send(DefaultResponse.self){
+        TabBarinteractor.sendOffer(id: id, privatePrice: privatePrice, commonPrice: commonPrice, date: date, time: time , notes: notes).send(DefaultResponse.self){
             [weak self] (response) in
             guard let self = self else { return }
             self.view?.hideIndicator()

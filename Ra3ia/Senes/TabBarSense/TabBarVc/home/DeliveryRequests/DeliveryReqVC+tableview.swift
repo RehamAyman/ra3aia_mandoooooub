@@ -25,15 +25,7 @@ extension DeliveryReqVC : UITableViewDelegate , UITableViewDataSource {
         presenter.configure(cell: cell, for: indexPath.row)
         
 
-        
-    if indexPath.row % 2 != 0 {
-        presenter.confugOddsCells(cell: cell)
-
-    } else {
-        presenter.configEvenCells(cell: cell)
-       
-    }
-        
+          
         
         
         

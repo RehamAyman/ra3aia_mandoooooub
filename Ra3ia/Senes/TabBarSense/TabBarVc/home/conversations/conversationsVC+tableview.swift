@@ -28,10 +28,10 @@ extension conversationsVC : UITableViewDelegate , UITableViewDataSource {
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.DidSelectRow(index: indexPath.row)
+       // presenter.DidSelectRow(index: indexPath.row)
+        presenter.didSelectRow(index: indexPath.row)
     }
     
     
-    
-    
+  
 }

@@ -18,6 +18,7 @@ protocol conversationView : class {
     func hideIndicator()
     func featchingData()
     func showError(error: String )
+    func GotoTextChat(id:Int)
     
     
     
@@ -43,6 +44,7 @@ class conversationsPresenter {
    private weak var view : conversationView?
    private var arrayRooms = [Rooms]()
     
+    //Rooms
     
     
     init(view : conversationView) {
@@ -105,6 +107,10 @@ class conversationsPresenter {
             }
         }
     }
+    func didSelectRow(index:Int){
+        self.view?.GotoTextChat(id: self.arrayRooms[index].id)
+    }
+    
     
     
 }

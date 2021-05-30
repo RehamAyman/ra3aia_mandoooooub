@@ -44,7 +44,7 @@ extension OrdersVC : UITableViewDelegate , UITableViewDataSource {
             self.presenter.didSelectRow(index: indexPath.row, type: "current")
         } else {
             self.presenter.didSelectRow(index: indexPath.row, type: "completed")
-            
+
         }
     }
     
@@ -67,4 +67,5 @@ extension OrdersVC : UITableViewDelegate , UITableViewDataSource {
         return 125
     }
 
+   
 }

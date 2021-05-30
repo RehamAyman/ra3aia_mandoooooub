@@ -63,17 +63,24 @@ class DeliveryReqVCPresenter{
         cell.SetDate(date:"Date: \(self.requestsModell[index].created_at)".localized())
         cell.setFromLocation(location: "From: \(self.requestsModell[index].receive_address)".localized())
         cell.setToLocation(Location: "To: \(self.requestsModell[index].deliver_address)".localized())
+        if requestsModell[index].type == "intercity_delivery" {
+            cell.configCitiesDelivery()
+        } else {
+            cell.ConfigOtherRequests()
+        }
 
     }
     
     
-    func confugintercity_deliveryCells ( cell : OrdersDetailsCell) {
-     //   cell.configoddCells()
-    }
-    
-    func configelseCells ( cell : OrdersDetailsCell) {
-      //  cell.configevenCells()
-    }
+//    func confugintercity_deliveryCells ( cell : OrdersDetailsCell) {
+//     //   cell.configoddCells()
+//        cell.configCitiesDelivery()
+//    }
+//    
+//    func configelseCells ( cell : OrdersDetailsCell) {
+//      //  cell.configevenCells()
+//        cell.ConfigOtherRequests()
+//    }
     
     
     
@@ -169,6 +176,7 @@ class DeliveryReqVCPresenter{
         self.view?.gotoShipmentDetails(id:  self.requestsModell[index].id)
             
             print("=================intercity_delivery=====")
+            print(requestsModell[index].id)
             print(self.requestsModell[index].type)
             print(self.requestsModell[index].type_)
             
@@ -180,7 +188,7 @@ class DeliveryReqVCPresenter{
             // small vc without  collection
             self.view?.goToClincShipmentDetails(id : self.requestsModell[index].id)
             
-            print("====================== mostalzmat haywan aw ay type ")
+            print("====================== mostalzmat haywan aw clinic type ")
             print ("go to the second shipment details vc \(self.requestsModell[index].id)")
             print(self.requestsModell[index].type)
             print(self.requestsModell[index].type_)

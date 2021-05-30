@@ -48,6 +48,10 @@ enum ServerPaths: String {
     case changeOrderStatus = "delegate-change-order-status"
     case finishOrder = "delegate-finish-order"
     case withdrawal = "delegate-withdraw-order"
+    case notifications = "notifications"
+    case delegateSingleRoom = "delegate-single-room"
+    case deleteBank = "delegate-delete-bank-account"
+    case updatePassword = "update-password"
   
 
     

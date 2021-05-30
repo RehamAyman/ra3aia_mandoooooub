@@ -16,6 +16,9 @@ protocol bankingAccountView : class  {
     func hideIndicator()
     func showError(error: String )
     func featchingData ()
+    func ShowAlert(id:Int)
+    func showSuccessMessge(msg: String )
+
 }
 
 
@@ -58,6 +61,7 @@ class BankingAccPresenter {
     
     func viewWillAppeare () {
         self.arrayOfBank.removeAll()
+        self.view?.featchingData()
         self.getBanksData()
     }
     func configureBankCells(cell: BankAccountsCellView, for index: Int) {
@@ -91,6 +95,31 @@ class BankingAccPresenter {
                 self.view?.showError(error: errorMessage.localizedDescription.localized)
             }
         }
+    }
+    func deleteBank(id:Int){
+        view?.showIndicator()
+        TabBarinteractor.deleteBank(id: id).send(DefaultResponse.self) {
+            [weak self] (response) in
+            guard let self = self else { return }
+            self.view?.hideIndicator()
+            switch response {
+            case .unAuthorized(_):
+                print("unAuthorized")
+            case .failure(let error):
+                print("failure\(String(describing: error))")
+            case .success(let value):
+                self.view?.showSuccessMessge(msg: value.msg ?? "")
+                self.viewWillAppeare()
+            case .errorResponse(let error):
+                guard let errorMessage = error as? APIError else { return  showNoInterNetAlert()}
+                self.view?.showError(error: errorMessage.localizedDescription.localized)
+            }
+        }
+
+    }
+    
+    func deleteLoctionAction(index:Int){
+        self.view?.ShowAlert(id: self.arrayOfBank[index].id)
     }
 
     

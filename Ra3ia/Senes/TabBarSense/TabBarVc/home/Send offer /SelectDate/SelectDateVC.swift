@@ -32,7 +32,7 @@ class SelectDateVC: UIViewController {
         
         let timeFormatter = DateFormatter()
         timeFormatter.dateStyle = .none
-        timeFormatter.dateFormat = "dd/MM/yyyy"
+        timeFormatter.dateFormat = "dd-MM-yyyy"
         self.delgate.selectedDate(date:  timeFormatter.string(from: packer.date))
         
         

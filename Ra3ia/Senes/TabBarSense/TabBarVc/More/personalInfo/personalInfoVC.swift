@@ -65,6 +65,7 @@ class personalInfoVC: UIViewController {
         
     @IBAction func editPassword(_ sender: UIButton) {
        // go to edit password screen
+        presenter.GoToEditPassword()
     
         
     }

@@ -20,6 +20,7 @@ class ConversationCell: UITableViewCell , conversationCellView {
         super.awakeFromNib()
         
         self.userImage.MakeRounded()
+        self.selectionStyle = .none
     }
 
     func setRoomImage(image: String) {

@@ -9,7 +9,12 @@ import UIKit
 
 class animalShipmentDetails: UIViewController {
     var id = "0"
-    var idd = 0
+// is order selected = false it means come from home vc
+// is order selected = true it mens come from my orders vc
+    var isOrderSelected = false
+    var completedOrderSelected = false
+    var isHomeSelected = false
+    
     
     
     var presenter : AnimalShipmentPresenter!
@@ -37,6 +42,9 @@ class animalShipmentDetails: UIViewController {
         presenter = AnimalShipmentPresenter(view: self)
         presenter.viewDidLoad()
         self.presenter.getShipmentModel(id: Int(id)!)
+        print("====================== true come from order , false come from home ")
+        print(isOrderSelected)
+        print(completedOrderSelected)
         
         
 
@@ -45,7 +53,11 @@ class animalShipmentDetails: UIViewController {
     
 
     @IBAction func accesept(_ sender: UIButton) {
-        presenter.sendAcceptOrder(id: Int(id) ?? 0)
+       
+            presenter.sendAcceptOrder(id: Int(id) ?? 0)
+            // then go to home
+        
+       
     }
     
     @IBAction func withdrawalButton(_ sender: UIButton) {
@@ -120,6 +132,8 @@ class animalShipmentDetails: UIViewController {
     
     @IBAction func finishOrder(_ sender: UIButton) {
         presenter.sendFinishOrder(id: id)
+        
+        
         
     }
 }

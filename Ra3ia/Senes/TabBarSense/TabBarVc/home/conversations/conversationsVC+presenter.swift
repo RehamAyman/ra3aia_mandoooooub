@@ -11,6 +11,13 @@ import ViewAnimator
 
 
 extension conversationsVC : conversationView {
+    func GotoTextChat(id: Int) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController {
+            vc.roomID = id
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     func showIndicator() {
         SKActivityIndicator.show()
     }
@@ -39,6 +46,5 @@ extension conversationsVC : conversationView {
         tableview.dataSource = self
         tableview.separatorStyle = .none
     }
-    
-    
+   
 }

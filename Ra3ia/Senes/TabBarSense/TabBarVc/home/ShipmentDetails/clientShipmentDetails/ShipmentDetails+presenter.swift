@@ -34,13 +34,15 @@ extension ShipmentdetailsVC : shipmentDetailsView {
             layout.minimumInteritemSpacing = 0
             layout.minimumLineSpacing = 0
             Collectionview!.collectionViewLayout = layout
+        
+        
     }
     
     
     
     func fetchingDataSuccess(dataa: ShipmentData) {
-        self.id = "\(dataa.id)"
-        self.idd = dataa.id!
+     //   self.id = "\(dataa.id)"
+        
         self.customerName.text = dataa.user_name
         self.animalType.text = dataa.animal
         self.deleiveringLoca.text = dataa.deliver_address
@@ -57,7 +59,7 @@ extension ShipmentdetailsVC : shipmentDetailsView {
     
     func gotoAddOfferVc() {
         let vc = Storyboard.Main.viewController(sendOfferVC.self)
-        vc.id = self.idd
+        vc.id = self.id
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

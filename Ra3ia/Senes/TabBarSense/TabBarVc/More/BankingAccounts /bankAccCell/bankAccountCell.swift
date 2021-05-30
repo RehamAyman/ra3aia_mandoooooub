@@ -14,6 +14,7 @@ class bankAccountCell: UITableViewCell , BankAccountsCellView {
     @IBOutlet weak var bankNumber: UILabel!
     @IBOutlet weak var bankName: UILabel!
     @IBOutlet weak var bankImage: UIImageView!
+    var delteAction : (()->())?
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
@@ -39,5 +40,8 @@ class bankAccountCell: UITableViewCell , BankAccountsCellView {
         }
         
 
+    @IBAction func deleteAction(_ sender: UIButton) {
+        self.delteAction?()
+    }
 }
 

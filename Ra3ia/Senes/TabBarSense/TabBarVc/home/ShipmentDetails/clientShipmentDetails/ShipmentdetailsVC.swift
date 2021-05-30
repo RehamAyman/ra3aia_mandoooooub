@@ -17,6 +17,7 @@ class ShipmentdetailsVC: UIViewController{
     @IBOutlet weak var resieveLoca: UILabel!
     @IBOutlet weak var streetName: UILabel!
     
+    @IBOutlet weak var acceptStack: UIStackView!
     @IBOutlet weak var Collectionview: UICollectionView!
     @IBOutlet weak var paymentMethod: UILabel!
     @IBOutlet weak var animalType: UILabel!
@@ -25,11 +26,20 @@ class ShipmentdetailsVC: UIViewController{
     
     var presenter : ShipmentPresenter!
     var id = "0"
-    var idd = 0
+    
+    var isOrderSelected = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("...................id \(id)")
+        print("=---=-=-=-=-=-=-=-=-=-=-=-=-")
+        
+        print(id)
+        if isOrderSelected == true {
+            self.acceptStack.isHidden = true
+        } else {
+            self.acceptStack.isHidden = false
+        }
+       
         presenter = ShipmentPresenter(view: self)
 
         presenter.getShipmentModel(id : Int(id)!)
@@ -56,8 +66,8 @@ class ShipmentdetailsVC: UIViewController{
     
     @IBAction func AcceptButton(_ sender: UIButton) {
         
-        presenter.sendAcceptOrder(id: idd)
-        
+//        presenter.sendAcceptOrder(id:Int(id) ?? 0 )
+        self.gotoAddOfferVc()
         
         
     }

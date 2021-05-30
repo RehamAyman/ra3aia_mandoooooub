@@ -22,7 +22,7 @@ extension animalShipmentDetails : AnimalshipmentDetailsView {
     
     func fetchingDataSuccess(dataa: ShipmentData) {
         
-        self.idd = dataa.id!
+        
         self.userName.text = dataa.user_name
         self.animalType.text = dataa.animal
         self.clinicName.text = dataa.place_name
@@ -47,12 +47,17 @@ extension animalShipmentDetails : AnimalshipmentDetailsView {
     }
     func changeAcceptButtons() {
         self.acceptStack.isHidden = true
-        self.startStack.isHidden = false
-        self.backOutlet.isHidden = true
+      //  self.startStack.isHidden = false
+       // self.backOutlet.isHidden = true
+        self.BackToHome()
+        // back to home
+        
         
         
     }
     func setUpViews() {
+      
+       
         self.startStack.AddTOPCornersView(num: 30)
         self.retchedCustomerOutlet.AddTOPCornersView(num: 25)
         self.goToClinicOutlet.AddTOPCornersView(num: 25)
@@ -64,6 +69,7 @@ extension animalShipmentDetails : AnimalshipmentDetailsView {
         
         
         
+        self.acceptStack.isHidden = true
         self.startStack.maskToBounds = true
         self.startStack.isHidden = true
         self.retchedCustomerOutlet.isHidden = true
@@ -73,6 +79,26 @@ extension animalShipmentDetails : AnimalshipmentDetailsView {
         self.finishedAtClinicOutlet.isHidden = true
         self.rechedBackClient.isHidden = true
         self.finishOrder.isHidden = true
+        
+        
+        
+        if isOrderSelected == true {
+                   // come from my order ( current )
+                   self.acceptStack.isHidden = true
+                   self.startStack.isHidden = false
+                   
+        } else if completedOrderSelected == true {
+            // comefrom my order ( completed )
+            self.acceptStack.isHidden = true
+            self.startStack.isHidden = true
+        }
+                
+           
+       else if isHomeSelected == true {
+                   // come from home
+                   self.acceptStack.isHidden = false
+                   self.startStack.isHidden = true
+               }
     }
     
     func ChangeButtonsWhenStartTap() {
@@ -93,8 +119,8 @@ extension animalShipmentDetails : AnimalshipmentDetailsView {
     }
   
     func changeBtnWhenFinishedAtClinic() {
-        self.finishedAtClinicOutlet.isHidden = false
-        self.goBackOutlet.isHidden = true
+        self.finishedAtClinicOutlet.isHidden = true
+        self.goBackOutlet.isHidden = false
     }
    
     func changeBtnWhenGoBackTapped() {

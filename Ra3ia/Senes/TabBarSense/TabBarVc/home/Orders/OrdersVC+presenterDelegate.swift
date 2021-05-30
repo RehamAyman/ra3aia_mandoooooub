@@ -9,6 +9,45 @@ import UIKit
 import SKActivityIndicatorView
 import ViewAnimator
 extension OrdersVC : OrdersView {
+    func goToShipment(id: Int) {
+        let vc = Storyboard.Main.viewController(ShipmentdetailsVC.self)
+          vc.id = String(id)
+        vc.isOrderSelected = true
+       
+       
+       
+       self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func goToCLinicSHipment(id: Int) {
+        let vc = Storyboard.Main.viewController(animalShipmentDetails.self)
+        vc.id = String(id)
+        if SegmentOutlet.selectedSegmentIndex == 0 {
+            // current order
+            
+            
+            vc.isOrderSelected = true
+            vc.completedOrderSelected = false
+            vc.isHomeSelected = false
+        } else if SegmentOutlet.selectedSegmentIndex ==  1 {
+            
+            // complete order
+            
+            
+            vc.completedOrderSelected = true
+            vc.isOrderSelected = false
+            vc.isHomeSelected = false
+            
+        }
+       
+        
+        
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+   
+    
     
     
     
@@ -38,6 +77,7 @@ extension OrdersVC : OrdersView {
     }
     func selectOrderDetils(id: Int) {
        // go to only details screen
+        
         
     }
    
