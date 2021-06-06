@@ -24,11 +24,17 @@ class OrdersVC: UIViewController {
         presenter = OrdersVCPresenter(view: self)
         
         setupTableView()
+        SegmentOutlet.setTitle("Completed requests".localized, forSegmentAt: 1)
+        SegmentOutlet.setTitle("Current requests".localized, forSegmentAt: 0)
+        
         
      
     }
+    
     override func viewWillAppear(_ animated: Bool) {
+    
         presenter.viewWillApper()
+       
     }
    
     

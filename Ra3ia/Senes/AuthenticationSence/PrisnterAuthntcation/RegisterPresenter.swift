@@ -59,13 +59,7 @@ class  RegisterVCpresenter {
     
     
     //MARK: - 3 class functions
-    
-    
-    
    
-
-   
-    
     
     func gotoNextScreen () {
         self.view?.GotoNextPage()
@@ -77,17 +71,7 @@ class  RegisterVCpresenter {
     
     func gotoNextPage () {
         self.view?.passingDataToNextPage()
-//    func cheackData(fname :String , lname:String,email:String,phone:String ,address :String, password:String , retypePassword : String ){
-//
-//        if(fname == ""||lname == "" || address == "" || email == "" ||  phone == "" || password == "" || retypePassword == "" ) {
-//            self.view?.showMsg(msg: "Please complete your data".localized)
-//        }else{
-////            self.RegisterNewDoctor(fname: fname, lname: lname, email: email, phone: phone, birthday: birthday, password: password)
-//            self.view?.passingDataToNextPage()
-//
-//
-//
-//        }
+
     }
     
     

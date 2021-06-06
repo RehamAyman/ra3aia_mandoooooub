@@ -59,10 +59,15 @@ class DeliveryReqVCPresenter{
     func configure(cell: OrdersDetailsCell, for index: Int) {
 
 
-        cell.SetAnimalType(AnimalType: "animal: \(self.requestsModell[index].animal)".localized())
-        cell.SetDate(date:"Date: \(self.requestsModell[index].created_at)".localized())
-        cell.setFromLocation(location: "From: \(self.requestsModell[index].receive_address)".localized())
-        cell.setToLocation(Location: "To: \(self.requestsModell[index].deliver_address)".localized())
+        cell.SetAnimalType(AnimalType: "animal:".localized +  " " + "\(self.requestsModell[index].animal)".localized)
+                           
+                           
+        cell.SetDate(date:"Date:".localized + " "  +  "\(self.requestsModell[index].created_at)".localized
+        
+        )
+        cell.setFromLocation(location: "From:" + " " + "\(self.requestsModell[index].receive_address)".localized)
+        cell.setToLocation(Location: "To:" + " " +  "\(self.requestsModell[index].deliver_address)".localized)
+        cell.setRequestNum(num: "#" + "\(requestsModell[index].id)")
         if requestsModell[index].type == "intercity_delivery" {
             cell.configCitiesDelivery()
         } else {
@@ -89,11 +94,7 @@ class DeliveryReqVCPresenter{
         
       
     }
-    func viewWillApear () {
-        self.requests.removeAll()
-        self.view?.FetchData()
-  //      self.getRequests()
-    }
+ 
     
     func getNumberOfcells () -> Int {
         return requestsModell.count
@@ -103,7 +104,7 @@ class DeliveryReqVCPresenter{
         
         view?.showIndicator()
 
-        self.requestsModell.removeAll()
+       
          
             TabBarinteractor.delegateHome.send(requestsModel.self){
                 [weak self] (response) in
@@ -131,7 +132,15 @@ class DeliveryReqVCPresenter{
         }
    
     func getReqData(lat:Double,lng:Double){
+        
+        
+        self.requestsModell.removeAll()
+        
+        
         view?.showIndicator()
+        
+        
+        
         let params:Parameters = [
             "lat":lat,
             "lng":lng
@@ -141,13 +150,17 @@ class DeliveryReqVCPresenter{
         API.GetAPIWithHeader(url:"https://raaia.4hoste.com/api/delegate-home", Parameters: params, Headers: ["Authorization":"Bearer \(KeyChain.userToken ?? "")"]) { (success, value) in
             if success{
                 self.view?.hideIndicator()
-                 let data = value["data"] as! [[String:Any]] 
-                self.requestsModell.removeAll()
                 
+                
+                 let data = value["data"] as! [[String:Any]] 
+              
+                
+                self.view?.FetchData()
                // self.requests = value["data"] as! [requestsData]
 //                self.view?.FetchData()
                 for i in data{
-                    let requsetsData = requstsModel().getObject(dicc: i);            self.requestsModell.append(requsetsData)
+                    let requsetsData = requstsModel().getObject(dicc: i)
+                    self.requestsModell.append(requsetsData)
                     
                     
                     

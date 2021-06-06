@@ -45,9 +45,7 @@ class LoginVcPresnter {
             switch response {
             case .unAuthorized(_):
                 print("unAuthorized")
-                
-                
-                
+         
             case .failure(let error):
            
                 print("failure\(String(describing: error))")

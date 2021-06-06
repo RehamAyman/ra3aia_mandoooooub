@@ -7,12 +7,12 @@
 */
  
  
-"Please enter the Mobile number and password" = "برجاء ادخال رقم الهاتف و كلمة المرور .. " ;
-"Email and Password are required !" = "برجاء ادخال رقم الهاتف و كلمة المرور ! " ;
-"Password and confirm password must be match. " = "يجب أن تكون كلمة المرور وتأكيد كلمة المرور متطابقتين." ;
-"Please complete your data" ; "برجاء اكمال بياناتك " ;
+"Please enter the Mobile number and password" = "برجاء ادخال رقم الهاتف و كلمة المرور .. ";
+"Email and Password are required !" = "برجاء ادخال رقم الهاتف و كلمة المرور ! ";
+"Password and confirm password must be match. " = "يجب أن تكون كلمة المرور وتأكيد كلمة المرور متطابقتين.";
+"Please complete your data"  = "برجاء اكمال بياناتك ";
 
-"You must agree to the terms and conditions first" = "عليك الموافقة علي الشروط والاحكام اولا" ;
+"You must agree to the terms and conditions first" = "عليك الموافقة علي الشروط والاحكام اولا";
 
 
 //login screen
@@ -27,38 +27,270 @@
 "Last name" = "الاسم الاخير";
 "Email" = "البريد الالكتروني";
 "Date of Birth" = "تاريخ الميلاد";
-"phone number" = "رقم الجوال" ;
-"Password" = "كلمة المرور" ;
-"Retype Password" = "تأكيد كلمة المرور" ;
-"Register" = "تسجيل " ;
-"Type" = "النوع" ;
-"Specialization" = "التخصص " ;
-"First Name" = "الاسم الاول" ;
-"Phone Number" = "رقم الجوال" ;
-"Address" = "العنوان" ;
-"Password" = "كلمة المرور" ;
-"Confirm password" = "تأكيد كلمة المرور" ;
-"Registering Means, you agree to" = "بتسجيلك في التطبيق فانت موافق علي الشروط و الاحكام" ;
-"Next" = "التالي" ;
-"have Account? login" = "هل لديك حساب ؟ تسجيل الدخول" ;
-"Enter Car Type" = "ادخل نوع السيارة" ;
-"vehicle picture" = "صورة المركبة" ;
-"ID picture" = "صورة الهوية" ;
-"driving license picture" = "صورة رخصه القيادة" ;
-"Personal Photo" = "صورة شخصيه" ;
-"Register" = "تسجيل الدخول" ;
+"phone number" = "رقم الجوال";
+"Password" = "كلمة المرور";
+"Retype Password" = "تأكيد كلمة المرور";
+"Register" = "تسجيل ";
+"Type" = "النوع";
+"Specialization" = "التخصص ";
+"First Name" = "الاسم الاول";
+"Phone Number" = "رقم الجوال";
+"Address" = "العنوان";
+"Password" = "كلمة المرور";
+"Confirm password" = "تأكيد كلمة المرور";
+"Registering Means, you agree to" = "بتسجيلك في التطبيق فانت موافق علي الشروط و الاحكام";
+"Next" = "التالي";
+"have Account? login" = "هل لديك حساب ؟ تسجيل الدخول";
+"Enter Car Type" = "ادخل نوع السيارة";
+"vehicle picture" = "صورة المركبة";
+"ID picture" = "صورة الهوية";
+"driving license picture" = "صورة رخصه القيادة";
+"Personal Photo" = "صورة شخصيه";
+"Register" = "تسجيل الدخول";
 
 // activation screen
+"Activation Code" = "كود التفعيل";
+"I didn't receive the code" = "لم يصلني الكود";
+"Confirm" = "تأكيد";
+"mobile Number" = "رقم الجوال";
+"New password" = "كلمة المرور الجديدة";
+"verification code" = "كود التفعيل ";
+"Confirm new password" = "تأكيد كلمة المرور الجديدة";
+"Confirm" = "تأكيد";
+"Select Address" = "اختر العنوان";
+"verification code" = "كود التفعيل ";
+"New password" = "كلمة المرور الجديدة";
+"Confirm new password" = "تأكيد كلمة المرور";
+"Confirm" = "تأكيد";
+
+
+
+//MARK: - tab bar part
+
+"Delivery requests" = "طلبات التوصيل";
+"Orders" = "الطلبات";
+"More" = "المزيد";
+//
+//
+//
+"deliver Now" = "توصيل الان";
+"animal:" = "الحيوان:";
+"Date:" = "التاريخ:";
+"From:" = "من:";
+"To:" = "الي:";
+"Language" = "اللغة";
+"Personal data" = "بيانات حسابي";
+"Bank accounts" = "الحسابات البنكية";
+"Financial accounts" =  "الحسابات المالية";
+"My wallet" = "محفظتي";
+"My bills" = "فواتيري";
+
+"My review" = "تقييمي";
+
+"Call Us" = "اتصل بنا";
+"Usage policy" = "سياسة الاستخدام";
+"Log Out" = "تسجيل الخروج";
+"Complaints and suggestions" = "الشكاوي و المقترحات";
+"personal information" = "معلومات شخصيه";
+"Language control" = "التحكم في اللغة";
+"You can pay the app commission from here" = "يمكنك سداد عمولة التطبيق من هنا ";
+ "You can see your balance" =  "يمكنك الاطلاع علي رصيدك";
+"You can add your bank accounts from here" = "يمكنك اضافه حساباتك البنكية من هنا ";
+"Financial movements of the buying and selling process" = "الحركات المالية لعمليات البيع أو الشراء";
+"You can see your review from here" = "يمكنك الاطلاع علي تقييمك من هنا";
+ "Is there a problem? We will help you solve it" =  "هل تواجه مشكلة ؟ سنساعدك علي حلها ";
+"Any terms and conditions are updated in the application" = "أي شروط او أحكام يتم تحديثها في التطبيق";
+"Send your complaint or suggestion from here" = "ارسل شكوتك أو اقتراحك من هنا ";
+"You can logOut your account from here" = "يمكنك تسجيل الخروج من حسابك من هنا";
+
+
+
+"The data has been modified successfully" = "تم تعديل البيانات بنجاح";
+"Please complete the data" = "من فضلك اكمل البيانات";
+"Password and confirm password must be match. " = "يجب أن تكون كلمة المرور وتأكيد كلمة المرور متطابقتين. ";
+ "a field value has been left Blank " =  "تم ترك قيمة حقل فارغة ";
+"You must choose a Location" = "يجب عليك اختيار موقع";
+"Mark the location on the map" = "ضع علامة على الموقع على الخريطة";
+"You must choose a Location" = "يجب عليك اختيار موقع";
+"Mark the location on the map" = "ضع علامة على الموقع على الخريطة";
+"Your Location" = "موقعك";
+"Confirmation" = "تأكيد";
+"request num:" = "رقم الطلب: ";
+"enter new user name " = "ادخل الاسم الجديد";
+ "enter new phone number " =  "ادخل رقم الجوال الجديد";
+"enter new email" = "ادخل البريد الالكتروني الجديد";
+"Sign Out" =  "تسجيل الخروج";
+"Are you sure you want to logout" = " هل أنت متأكد أنك تريد تسجيل الخروج";
+
+"OK" = "تأكيد";
+"Cancel" = "إالغاء";
+"Are you sure you want to delete this bank?" = "هل انت متاكد انك تريد مسح هذا البنك";
+"Delete" = "مسح";
+"enter new user name " = "ادخل اسم مستخدم جديد";
+"enter new phone number " = "ادخل رقم الجوال الجديد";
+"enter new email" = "ادخل البريد الالكتروني الجديد";
+
+
+
+
+
+
+"You must agree to the terms and conditions first" = "يجب الموافقه علي الشروط و الاحكام اولا";
+"Password and confirm password must be match. " = "يجب أن تكون كلمة المرور وتأكيد كلمة المرور متطابقتين. ";
+"you enterd same current and new password  " = "كلمه المرور الحاليه و كلمه المرور القديمه متطابقتين ";
+"Password and confirm password must be match!" = "يجب أن تكون كلمة المرور وتأكيد كلمة المرور متطابقتين.";
+"S.R" = "ريال سعودى ";
+"send verification code successfully .. " = "تم ارسال كود التفعيل بنجاح ..";
+"Accsept" = "قبول";
+"reached  to The customer" = "تم الوصول للعميل";
+"reached clinic" = "تم الوصول للعيادة";
+"go to clinic" = "انطلق للعيادة";
+"reached back client" = "تم الوصول لموقع العميل";
+"finished at clinic" = "الانتهاء في العيادة";
+"go back" = "بدء رحله العودة";
+"Refuse" = "رفض";
+"Shipment details" = "تفاصيل الشحنة";
+"Customer details" = "تفاصيل العميل";
+"Clinic details" = "تفاصيل العيادة";
+"Order details" = "تفاصيل الطلب";
+"Withdrawal reason" = "سبب الانسحاب";
+"Confirm" = "تأكيد";
+"Send Price offer" = "ارسال عرض سعر";
+"Common transport price" = "سعر النقل المشترك";
+"Select date" = "اختر تاريخ";
+"Select Time" = "اختر ميعاد";
+"Notes:" = "ملاحظات:";
+"Send" = "ارسال";
+"Confirm" = "تأكيد";
+"pick a Time" = "اختر وقت ";
+"pick a date" = "اختر تاريخ";
+"client details" = "تفاصيل العميل";
+"Shipment details" = "تفاصيل الشحنة";
+"shipment receiving location" = "موقع استلام الشحنة";
+"shipment Delivery location" = "موقع تسليم الشحنة";
+"shipment Details" = "تفاصيل الشحنة";
+"payment method" = "طريقه الدفع";
+"Accept" = "قبول";
+"Refue" = "رفض";
+"Details" =  "التفاصيل" ;
+"Current requests" = "الطلبات الحالية" ;
+"Completed requests" = "الطلبات المنتهية" ;
+"Are you sure you want to log out?" = "هل انت متاكد من انك تريد تسجيل الخروج ؟" ;
+"Orders" = "الطلبات" ;
+
+"Details" = "التفاصيل" ;
+"Current requests" = "الطلبات الحالية";
+"Completed requests" = "الطلبات المنتهية" ;
+"Password" = "كلمة المرور";
+"ID picture" = "صورة الهوية";
+"driving license picture" = "صورة رخصة القيادة" ;
+"vehicle picture" = "صورة المركبة";
+"first name" = "الاسم الاول" ;
+"last name" = "الاسم الاخير" ;
+"Personal Information" = "بيانات حسابي";
+"Submit" = "تأكيد";
+"Language :" = "اللغة :";
+"Your overall rating is" = "تقييمك العام هو";
+"My review" = "تقييمي";
+"Via Phone" = "التواصل عبر الهاتف";
+"Via Email" = "التواصل عبر البريد الالكتروني";
+"Via Whatsapp" = "التواصل عبر الواتساب";
+"Usage policy" = "سياسة الاستخدام";
+"Call Us" = "اتصل بنا";
+"Complaints and Suggestions" = "الشكاوي والمقترحات" ;
+"Subject title" = "عنوان الشكوي";
+"Send" = "ارسال";
+"Settlement request" = "طلب تسوية";
+"S.R" = "ريال سعودي";
+"Subject text" = "موضوع الشكوي";
+"My wallet" = "محفظتي" ;
+"Your current balance" = "رصيدك الحالي هو" ;
+"Financial accounts" = "الحسابات المالية" ;
+"Amount to be paid" = "المبلغ المراد دفعه";
+"The total of your requests" = "مجموع طلباتك بالتطبيق";
+"S.R" = "ريال سعودي" ;
+"request Number :" = "رقم الطلب :";
+"cost :" = "التكلفة :" ;
+"Settlement" = "تسوية" ;
+"App commission :" = "عمولة التطبيق :";
+"Add" = "اضافه";
+"My bills" = "فواتيري";
+"request type :" = "نوع الطلب :" ;
+"request cost :" = "تكلفه الطلب :" ;
+"The date of request :" = "تاريخ الطلب :";
+"Add New Account" = "اضافه حساب جديد" ;
+"Bank name" = "اسم البنك" ;
+"Receipt number" = "رقم الايبان" ;
+"Account Number" = "رقم الحساب" ;
+"A copy of the receipt" = "صورة البنك" ;
+
+
+"  Bank transfer" = "  التحويل البنكي";
+"  credit card" = "  البطاقه الائتمانيه";
+"select payment method" = "تحديد طريقة الدفع" ;
+
+"send a complaint" = "ارسل شكوي " ;
+"Add Image" = "اضف صوره" ;
+"Chat" = "الرسائل" ;
+
+"Edit" = "تعديل";
+"current password" = "كلمة المرور الحالية";
+"New password" = "كلمة المرور الجديدة";
+"Confirm" = "تأكيد" ;
+"Chat" = "الرسائل";
+"Notifications" = "الاشعارات";
+"Write your message here .." = "اكتب رسالتك هنا .." ;
+
+"Last Name" = "الاسم الاخير";
+"Login" = "تسجيل الدخول" ;
+"terms and conditions" = "الشروط و الاحكام" ;
+"please complete your data !" = "من فضلك اكمل البيانات ،،" ;
+
+
+"I didn't receive the code" = "لم يصلني الكود ";
 "Activation Code" = "كود التفعيل" ;
-"I didn't receive the code" = "لم يصلني الكود" ;
-"Confirm" = "تأكيد" ;
-"mobile Number" = "رقم الجوال"  ;
-"New password" = "كلمة المرور الجديدة" ;
-"verification code" = "كود التفعيل " ;
-"Confirm new password" = "تأكيد كلمة المرور الجديدة" ;
-"Confirm" = "تأكيد" ;
-"Select Address" = "اختر العنوان" ;
-"verification code" = "كود التفعيل " ;
-"New password" = "كلمة المرور الجديدة" ;
-"Confirm new password" = "تأكيد كلمة المرور" ;
-"Confirm" = "تأكيد" ;
+"Confirm" = "تاكيد";
+
+"car type" = "نوع السيارة";
+"Back" = "رجوع" ;
+"Edit" = "تعديل" ;
+"mobile Number" = "رقم الجوال" ;
+"You have signed in successfully" = "لقد تم تسجيل الدخول بنجاح" ;
+
+"Private transportation price" = "سعر النقل الخاص";
+"EX: 12/2/2021" = "مثال: ١٢/٢/٢٠٢١" ;
+"EX : 5:00" = "مثال : ٤:٠٠ مساء " ;
+"EX: 100 R.S" = "مثال: ١٠٠ ريال سعودي" ;
+
+"EX: 50 R.S" = "مثال: ٥٠ ريال سعودي" ;
+"ID picture" = "صورة الهوية" ;
+"vehicle picture" = "صورة المركبة" ;
+
+
+"Settle all" = "تسوية الكل" ;
+"Amount to be paid" = "المبلغ المراد دفعة" ;
+"Settlement" = "تسوية" ;
+"Via Whatsapp" = "التواصل عبر الواتساب" ;
+"Completed requests" = "الطلبات المنتهية" ;
+"Current requests" = "الطلبات الحالية" ;
+
+
+"withdrawal" = "انسحاب" ;
+"Start" = "انطلاق" ;
+"reached  to The customer" = "تم الوصول للعميل" ;
+"go to clinic" = "انطلق للعيادة" ;
+
+"finished at clinic" = "الانتهاء في العيادة" ;
+
+"finish order" = "انهاء الرحلة" ;
+"My bills" = "فواتيري" ;
+"Conversations" = "المحادثات";
+"Please enter the Title and Content" = "الرجاء كتابه عنوان وموضوع الشكوي" ;
+
+"package received" = "تم استلام الشحنة" ;
+"Finish Order" = "انهاء الرحلة" ;
+"go back" = "بدء رحله العودة" ;
+"reached back client" = "تم العودة لموقع العميل" ;
+"reached receive address" = "تم الوصول لعنوان الاستلام" ;
+"credit card" = "البطاقة الائتمانية" ;
+"Bank transfer" = "التحويل البنكي" ;

@@ -15,7 +15,8 @@ protocol myWalletView : class {
     func showIndicator()
     func hideIndicator()
     func showError(error:String)
-    func setWalletMony( mony : String)
+    func featchData ( data : WalletData)
+   
 
 }
 
@@ -26,6 +27,8 @@ protocol myWalletView : class {
 class MyWalletPresenter {
     //MARK:- 1 variabals
     private weak var view : myWalletView?
+    private var link = ""
+ 
 
     //MARK:- 2 view initionalizer
     
@@ -55,7 +58,9 @@ class MyWalletPresenter {
             case .success(let value):
                 print(value)
               //  self.view?.FeatchData(rate: value.data.rate)
-                self.view?.setWalletMony(mony: value.data.wallet)
+                self.view?.featchData(data: value.data)
+                
+             //   self.view?.setUrl(url: value.data.charge_url)
 
 
             case .errorResponse(let error):
@@ -65,8 +70,7 @@ class MyWalletPresenter {
         }
     }
 
-    
-    
-    
+   
+  
 }
 

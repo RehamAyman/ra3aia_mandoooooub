@@ -14,12 +14,18 @@ class finincialAccountVC: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var totalReq: UILabel!
     @IBOutlet weak var ammountToPaied: UILabel!
+    var SetAllurl = ""
     
     
-    //MARK:- CYCLE
+    //MARK:- CYCLExxxz
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("======== view did load +=========== ")
+        print(SetAllurl)
+        
+        
+        
         presenter = finincialAccPresenter(view: self)
         presenter.ViewDidLoad()
         
@@ -32,7 +38,7 @@ class finincialAccountVC: UIViewController {
 
     //MARK:- IBACTIONS
     @IBAction func settalBuutom(_ sender: UIButton) {
-        presenter.GotoSelectPayMethod()
+        self.openSetallUrl()
     }
     
     @IBAction func back(_ sender: UIButton) {

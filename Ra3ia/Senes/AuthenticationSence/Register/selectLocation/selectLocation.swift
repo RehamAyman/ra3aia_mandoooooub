@@ -128,7 +128,7 @@ class SelectLocationViewController: UIViewController ,CLLocationManagerDelegate,
     @IBAction func chooseLocationBtnPressed(_ sender: Any) {
         if self.locationLabel.text?.isEmpty == false  {
             if (self.locationLabel.text == "موقعك" || self.locationLabel.text == "Your Location") {
-                Alert.showAlertOnVC(target: self, title: "You must choose a Location".localized(), message: "Mark the location on the map".localized)            }else{
+                Alert.showAlertOnVC(target: self, title: "You must choose a Location".localized, message: "Mark the location on the map".localized)            }else{
                 delegate?.finishPassing(location: locationLabel.text! , lat: self.lat! , lng: self.lng!)
                 self.dismiss(animated: true)
                 
@@ -137,7 +137,7 @@ class SelectLocationViewController: UIViewController ,CLLocationManagerDelegate,
             
         }
         else{
-            Alert.showAlertOnVC(target: self, title: "You must choose a Location".localized(), message: "Mark the location on the map".localized)
+            Alert.showAlertOnVC(target: self, title: "You must choose a Location".localized, message: "Mark the location on the map".localized)
         }
     }
     

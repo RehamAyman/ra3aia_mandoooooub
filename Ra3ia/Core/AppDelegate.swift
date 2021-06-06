@@ -16,6 +16,7 @@ import FirebaseMessaging
 import SwiftyJSON
 import CoreLocation
 import MapKit
+import CBFlashyTabBarController
 
 
 
@@ -35,7 +36,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyBrEyBXL7xP6XwzTnybqmYciGjjxsYF5xIs")
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarTintColor = UIColor.BasicColor
+        
+//        
+//        let preferredLanguage = NSLocale.preferredLanguages[0]
+//               if preferredLanguage == "en" {
+//                   print("------------------------------------------------------------------")
+//                   print("this is English")
+//       
+//                   CBFlashyTabBar.appearance().semanticContentAttribute = .forceLeftToRight
+//                  
+//               } else if preferredLanguage == "ar" {
+//                   print("this is ar")
+//                   print("----------------------------------------")
+//                   CBFlashyTabBar.appearance().semanticContentAttribute = .forceRightToLeft
+//        
+//        
+//               }
+//        
         self.setUpSegment()
+        self.tabBarSetUp()
         self.location?.requestAlwaysAuthorization()
         self.location?.requestWhenInUseAuthorization()
         application.registerForRemoteNotifications()
@@ -80,6 +99,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
+    
+ 
 
 }
 extension AppDelegate {
@@ -96,7 +117,21 @@ func setUpSegment() {
 
 
     }
+    
+    
+    func tabBarSetUp () {
+        let appearance = UITabBarItem.appearance()
+        let attributes = [NSAttributedString.Key.font:UIFont(name: "Fairuz-Bold", size: 18)]
+        appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
+    }
+    
+    
 }
+
+
+
+
+
 // [START ios_10_message_handling]
 @available(iOS 10, *)
 extension AppDelegate : UNUserNotificationCenterDelegate {
@@ -116,15 +151,15 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
 
 
         let userInfo = notification.request.content.userInfo
-        let title = JSON(userInfo[AnyHashable("title")]!).string
-        let message_ar = JSON(userInfo[AnyHashable("message_ar")]!).string
-        let message_en = JSON(userInfo[AnyHashable("message_en")]!).string
-        var massgae = ""
-        //        if(getServerLang() == "ar"){
-        //            massgae = message_ar!
-        //        }else{
-        //            massgae = message_en!
-        //        }
+//        let title = JSON(userInfo[AnyHashable("title")]!).string
+//        let message_ar = JSON(userInfo[AnyHashable("message_ar")]!).string
+//        let message_en = JSON(userInfo[AnyHashable("message_en")]!).string
+//        var massgae = ""
+//        //        if(getServerLang() == "ar"){
+//        //            massgae = message_ar!
+//        //        }else{
+//        //            massgae = message_en!
+//        //        }
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
@@ -142,10 +177,10 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         print("will present notification")
         print("🤩 \(response.notification.request.content.userInfo)")
 
-        let userInfo = response.notification.request.content.userInfo
+       let userInfo = response.notification.request.content.userInfo
         _ = JSON(userInfo[AnyHashable("title")]!).string
-        let message_ar = JSON(userInfo[AnyHashable("message_ar")]!).string
-        let message_en = JSON(userInfo[AnyHashable("message_en")]!).string
+//        let message_ar = JSON(userInfo[AnyHashable("message_ar")]!).string
+//        let message_en = JSON(userInfo[AnyHashable("message_en")]!).string
         var massgae = ""
         //        if(getServerLang() == "ar"){
         //            massgae = message_ar!
@@ -203,5 +238,6 @@ extension AppDelegate : MessagingDelegate {
 extension Notification.Name {
     static let openAddProduct = Notification.Name("openAddProduct")
     static let stopTimer = Notification.Name("stopTimer")
+    static let updateData = Notification.Name("updateData")
 
 }

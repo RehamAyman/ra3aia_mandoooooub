@@ -37,10 +37,10 @@ extension conversationsVC : conversationView {
         showErrorAlert(title: "", message: error)
     }
     
-    func gotoChat() {
-        let vc = Storyboard.Main.viewController(messageVC.self)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+//    func gotoChat() {
+//        let vc = Storyboard.Main.viewController(ChatViewController.self)
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
     func setUptable() {
         tableview.delegate = self
         tableview.dataSource = self

@@ -30,8 +30,4 @@ extension finincialAccountVC : UITableViewDelegate , UITableViewDataSource {
     
     
     
-    
-    
-    
-    
 }

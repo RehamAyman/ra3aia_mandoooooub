@@ -30,6 +30,7 @@ func setToLocation ( Location : String)
 func setFromLocation (location : String)
 func SetDate ( date : String)
 func SetAnimalType ( AnimalType : String)
+    func setRequestNum ( num : String)
     
     
     
@@ -78,10 +79,13 @@ class OrdersVCPresenter{
     
     func configureCurrentReqCells(cell: OrdersDetailsCell , for index: Int) {
         
-        cell.SetAnimalType(AnimalType: "animal: \(currentRequestsArray[index].animal)".localized())
-        cell.SetDate(date: "Date: \(currentRequestsArray[index].created_at)".localized())
-        cell.setFromLocation(location: "From: \(currentRequestsArray[index].receive_address)".localized())
-        cell.setToLocation(Location: "To: \(currentRequestsArray[index].deliver_address)".localized())
+        cell.SetAnimalType(AnimalType: "animal:".localized + " " + "\(currentRequestsArray[index].animal)".localized)
+                           cell.SetDate(date: "Date:".localized + " " + "\(currentRequestsArray[index].created_at)".localized)
+        cell.setFromLocation(location: "From:" + " " + "\(currentRequestsArray[index].receive_address)".localized)
+        cell.setToLocation(Location: "To:".localized + "\(currentRequestsArray[index].deliver_address)".localized)
+        
+        
+        cell.setRequestNum(num: "#" + "\(currentRequestsArray[index].id)"  )
         if currentRequestsArray[index].type == "intercity_delivery" {
             cell.configCitiesDelivery()
         } else {
@@ -90,10 +94,11 @@ class OrdersVCPresenter{
       
     }
     func configCompletedcells( cell : OrdersDetailsCell , for index : Int) {
-        cell.SetAnimalType(AnimalType: "Animal: \(completedOrdersArray[index].animal)".localized())
-        cell.setFromLocation(location: "From: \(completedOrdersArray[index].receive_address)".localized())
-        cell.setToLocation(Location: "To: \(completedOrdersArray[index].deliver_address)".localized())
-        cell.SetDate(date: "Date: \(completedOrdersArray[index].created_at)".localized())
+        cell.SetAnimalType(AnimalType: "Animal:".localized + " " + "\(completedOrdersArray[index].animal)".localized)
+        cell.setFromLocation(location: "From:".localized + " " + "\(completedOrdersArray[index].receive_address)".localized)
+        cell.setToLocation(Location: "To:" + " " + "\(completedOrdersArray[index].deliver_address)".localized)
+        cell.SetDate(date: "Date:".localized + " " + "\(completedOrdersArray[index].created_at)".localized)
+        cell.setRequestNum(num: "#\(completedOrdersArray[index].id)")
         
         if completedOrdersArray[index].type == "intercity_delivery" {
             cell.configCitiesDelivery()

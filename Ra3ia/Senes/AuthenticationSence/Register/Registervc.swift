@@ -51,6 +51,7 @@ class Registervc: UIViewController {
     }
     
     @IBAction func termsconditions(_ sender: UIButton) {
+        presenter.gotoTermsScreen()
     }
     
     @IBAction func nextButton(_ sender: UIButton) {

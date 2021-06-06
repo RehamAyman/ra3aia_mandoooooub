@@ -31,6 +31,7 @@ struct Rooms : Codable {
     let sender_avatar : String
     let last_message_created_at : String
     let last_message_content : String
+    let last_message_id : Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -39,4 +40,5 @@ struct Rooms : Codable {
         case sender_avatar = "sender_avatar"
         case last_message_created_at = "last_message_created_at"
         case last_message_content = "last_message_content"
+        case last_message_id = "last_message_id"
     }}

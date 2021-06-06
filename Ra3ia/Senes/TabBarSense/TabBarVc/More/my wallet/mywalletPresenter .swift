@@ -5,9 +5,23 @@
 //  Created by Reham Ayman on 4/27/21.
 //
 
-import Foundation
+
+
+import  UIKit
 import SKActivityIndicatorView
-extension myWalletVC : myWalletView {
+import SafariServices
+
+
+extension myWalletVC : myWalletView  , SFSafariViewControllerDelegate{
+    func featchData(data: WalletData) {
+        self.walletLabel.text = data.wallet
+        self.url = data.charge_url
+    }
+    
+   
+    
+ 
+
     func FeatchData(rate: String) {
         
     }
@@ -24,9 +38,12 @@ extension myWalletVC : myWalletView {
         showErrorAlert(title: "", message: error)
     }
     
-    func setWalletMony(mony: String) {
-        self.walletLabel.text = mony
-        
+    func openSafariUrl () {
+        if let url = URL(string: self.url) {
+                let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+                vc.delegate = self
+                present(vc, animated: true)
+            }
     }
     
     

@@ -9,6 +9,8 @@ import UIKit
 
 class myWalletVC: UIViewController {
     var presenter : MyWalletPresenter!
+    var url = ""
+   
 
     @IBOutlet weak var walletLabel: UILabel!
     override func viewDidLoad() {
@@ -29,5 +31,7 @@ class myWalletVC: UIViewController {
     }
     
     @IBAction func settellment(_ sender: UIButton) {
+        self.openSafariUrl()
+        
     }
 }

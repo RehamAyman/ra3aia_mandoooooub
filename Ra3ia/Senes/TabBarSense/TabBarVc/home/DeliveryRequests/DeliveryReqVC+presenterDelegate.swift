@@ -36,6 +36,8 @@ extension DeliveryReqVC : DeliveryRegView {
          let vc = Storyboard.Main.viewController(ShipmentdetailsVC.self)
            vc.id = id
         vc.isOrderSelected = false
+        vc.isComeFromHome = true
+        vc.isComeFromCompletedOrder = false
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

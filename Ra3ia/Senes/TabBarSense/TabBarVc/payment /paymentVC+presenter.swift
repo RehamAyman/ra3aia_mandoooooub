@@ -11,12 +11,12 @@ extension paymentVC : paymentView {
     func makeRoundBtnTopCorners() {
         self.confirmOutlet.AddTOPCorners(num: 25)
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 }

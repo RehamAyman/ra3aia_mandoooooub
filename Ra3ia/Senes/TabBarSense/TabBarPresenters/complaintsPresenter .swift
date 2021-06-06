@@ -30,7 +30,7 @@ class  ComplaintsVCPresnter {
         self.view = view
     }
    
-    func SendCompliment(subject:String,content:String){
+    func SendCompliment( subject:String,content:String){
         view?.showIndicator()
         TabBarinteractor.contactUs(type: "complaint", subject: subject, content: content).send(DefaultResponse.self){
             [weak self] (response) in

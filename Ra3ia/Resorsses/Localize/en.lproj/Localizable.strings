@@ -68,5 +68,240 @@
 "Confirm new password" = "Confirm new password" ;
 "Confirm" = "Confirm" ;
 
+//MARK: - tab bar part
+
+"Delivery requests" = "Delivery requests" ;
+"Orders" = "Orders" ;
+"More" = "More" ;
 
 
+
+
+"deliver Now" = "deliver Now" ;
+"animal:" = "animal:" ;
+"Date:" = "Date:" ;
+"From:" = "From:" ;
+"To:" = "To:" ;
+"Language" = "Language" ;
+"Personal data" = "Personal data" ;
+"Bank accounts" = "Bank accounts" ;
+ "Financial accounts" =  "Financial accounts" ;
+"My wallet" = "My wallet" ;
+"My bills" = "My bills" ;
+
+"My review" = "My review" ;
+
+"Call Us" = "Call Us" ;
+"Usage policy" = "Usage policy" ;
+"Log Out" = "Log Out" ;
+"Complaints and suggestions" = "Complaints and suggestions" ;
+"personal information" = "personal information" ;
+"Language control" = "Language control" ;
+"You can pay the app commission from here" = "You can pay the app commission from here" ;
+ "You can see your balance" =  "You can see your balance" ;
+"You can add your bank accounts from here" = "You can add your bank accounts from here" ;
+"Financial movements of the buying and selling process" = "Financial movements of the buying and selling process" ;
+"You can see your review from here" = "You can see your review from here" ;
+ "Is there a problem? We will help you solve it" =  "Is there a problem? We will help you solve it" ;
+"Any terms and conditions are updated in the application" = "Any terms and conditions are updated in the application" ;
+"Send your complaint or suggestion from here" = "Send your complaint or suggestion from here" ;
+"You can logOut your account from here" = "You can logOut your account from here" ;
+
+
+
+"The data has been modified successfully" = "The data has been modified successfully" ;
+"Please complete the data" = "Please complete the data" ;
+"Password and confirm password must be match. " = "Password and confirm password must be match. " ;
+ "a field value has been left Blank " =  "a field value has been left Blank " ;
+"You must choose a Location" = "You must choose a Location" ;
+"Mark the location on the map" = "Mark the location on the map" ;
+"You must choose a Location" = "You must choose a Location" ;
+"Mark the location on the map" = "Mark the location on the map" ;
+"Your Location" = "Your Location" ;
+"Confirmation" = "Confirmation" ;
+"request num:" = "request num:" ;
+"enter new user name " = "enter new user name " ;
+ "enter new phone number " =  "enter new phone number " ;
+"enter new email" = "enter new email" ;
+"Sign Out" =  "Sign Out";
+"Are you sure you want to logout" = "Are you sure you want to logout" ;
+
+"OK" = "OK" ;
+"Cancel" = "Cancel" ;
+"Are you sure you want to delete this bank?" = "Are you sure you want to delete this bank?" ;
+"Delete" = "Delete" ;
+"enter new user name " = "enter new user name " ;
+"enter new phone number " = "enter new phone number " ;
+"enter new email" = "enter new email" ;
+
+///
+"You must agree to the terms and conditions first" = "You must agree to the terms and conditions first" ;
+"Password and confirm password must be match. " = "Password and confirm password must be match. " ;
+"you enterd same current and new password  " = "you enterd same current and new password  " ;
+"Password and confirm password must be match!" = "Password and confirm password must be match!" ;
+"S.R" = "S.R" ;
+"send verification code successfully .. " = "send verification code successfully .. " ;
+"Accsept" = "Accsept" ;
+"reached  to The customer" = "reached  to The customer" ;
+"reached clinic" = "reached clinic" ;
+"go to clinic" = "go to clinic" ;
+"reached back client" = "reached back client" ;
+"finished at clinic" = "finished at clinic" ;
+"go back" = "go back" ;
+"Refuse" = "Refuse" ;
+"Shipment details" = "Shipment details" ;
+"Customer details" = "Customer details" ;
+"Clinic details" = "Clinic details" ;
+"Order details" = "Order details" ;
+"Withdrawal reason" = "Withdrawal reason" ;
+"Confirm" = "Confirm" ;
+"Send Price offer" = "Send Price offer" ;
+"Common transport price" = "Common transport price" ;
+"Select date" = "Select date" ;
+"Select Time" = "Select Time" ;
+"Notes:" = "Notes:" ;
+"Send" = "Send" ;
+"Confirm" = "Confirm" ;
+"pick a Time" = "pick a Time" ;
+"pick a date" = "pick a date" ;
+"client details" = "client details" ;
+"Shipment details" = "Shipment details" ;
+"shipment receiving location" = "shipment receiving location" ;
+"shipment Delivery location" = "shipment Delivery location" ;
+"shipment Details" = "shipment Details" ;
+"payment method" = "payment method" ;
+"Accept" = "Accept" ;
+"Refue" = "Refue"  ;
+
+
+
+"Details" =  "Details" ;
+"Current requests" = "Current requests" ;
+"Completed requests" = "Completed requests" ;
+"Are you sure you want to log out?" = "Are you sure you want to log out?" ;
+
+"Orders" = "Orders" ;
+"send a complaint" = "send a complaint" ;
+"Add Image" = "Add Image" ;
+"Chat" = "Chat" ;
+
+
+"Details" = "Details" ;
+"Current requests" = "Current requests";
+"Completed requests" = "Completed requests" ;
+"Password" = "Password";
+"ID picture" = "ID picture";
+"driving license picture" = "driving license picture" ;
+"vehicle picture" = "vehicle picture";
+"first name" = "first name" ;
+"last name" = "last name" ;
+"Personal Information" = "Personal Information";
+"Submit" = "Submit";
+"Language :" = "Language :";
+"Your overall rating is" = "Your overall rating is";
+"My review" = "My review";
+"Via Phone" = "Via Phone";
+"Via Email" = "Via Email";
+"Via Whatsapp" = "Via Whatsapp";
+"Usage policy" = "Usage policy";
+"Call Us" = "Call Us";
+"Complaints and Suggestions" = "Complaints and Suggestions" ;
+"Subject title" = "Subject title";
+"Send" = "Send";
+"Settlement request" = "Settlement request";
+"S.R" = "S.R";
+"Subject text" = "Subject text";
+"My wallet" = "My wallet" ;
+"Your current balance" = "Your current balance" ;
+"Financial accounts" = "Financial accounts" ;
+"Amount to be paid" = "Amount to be paid";
+"The total of your requests" = "The total of your requests";
+"S.R" = "S.R" ;
+"request Number :" = "request Number :";
+"cost :" = "cost :" ;
+"Settlement" = "Settlement" ;
+"App commission :" = "App commission :";
+"Add" = "Add";
+"My bills" = "My bills";
+"request type :" = "request type :" ;
+"request cost :" = "request cost :" ;
+"The date of request :" = "The date of request :";
+"Add New Account" = "Add New Account" ;
+"Bank name" = "Bank name" ;
+"Receipt number" = "Receipt number" ;
+"Account Number" = "Account Number" ;
+"A copy of the receipt" = "A copy of the receipt" ;
+
+
+"  Bank transfer" = "  Bank transfer";
+"  credit card" = "  credit card";
+"select payment method" = "select payment method" ;
+
+
+"Edit" = "Edit";
+"current password" = "current password";
+"New password" = "New password";
+"Confirm" = "Confirm" ;
+"Chat" = "Chat";
+"Notifications" = "Notifications";
+"Write your message here .." = "Write your message here .." ;
+
+"Last Name" = "Last Name";
+"Login" = "Login" ;
+"terms and conditions" = "terms and conditions" ;
+"please complete your data !" = "please complete your data !" ;
+
+
+"I didn't receive the code" = "I didn't receive the code";
+"Activation Code" = "Activation Code" ;
+"Confirm" = "Confirm";
+
+"car type" = "car type";
+"Back" = "Back" ;
+"Edit" = "Edit" ;
+
+"mobile Number" = "mobile Number" ;
+"You have signed in successfully" = "You have signed in successfully" ;
+
+
+
+"Private transportation price" = "Private transportation price";
+"EX: 12/2/2021" = "EX: 12/2/2021" ;
+"EX : 5:00" = "EX : 5:00" ;
+"EX: 100 R.S" = "EX: 100 R.S" ; 
+
+"EX: 50 R.S" = "EX: 50 R.S" ;
+"ID picture" = "ID picture" ;
+"vehicle picture" = "vehicle picture" ; 
+
+"Settle all" = "Settle all" ;
+"Amount to be paid" = "Amount to be paid" ;
+"Settlement" = "Settlement" ;
+"Via Whatsapp" = "Via Whatsapp" ;
+"Completed requests" = "Completed requests" ;
+"Current requests" = "Current requests" ;
+
+
+"withdrawal" = "withdrawal" ;
+"Start" = "Start" ;
+"reached  to The customer" = "reached  to The customer" ;
+"go to clinic" = "go to clinic" ;
+
+"finished at clinic" = "finished at clinic" ;
+
+"finish order" = "finish order" ;
+
+"My bills" = "My bills" ;
+"Conversations" = "Conversations";
+"Please enter the Title and Content" = "Please enter the Title and Content" ;
+
+
+"package received" = "package received" ;
+"Finish Order" = "Finish Order" ;
+"go back" = "go back" ;
+"reached back client" = "reached back client" ;
+"reached receive address" = "reached receive address" ;
+
+
+"credit card" = "credit card" ;
+"Bank transfer" = "Bank transfer" ; 

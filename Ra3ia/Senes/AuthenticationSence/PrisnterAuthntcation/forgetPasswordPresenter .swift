@@ -49,11 +49,11 @@ class  ForgetPasswordPresnter {
                 
                 if(value.code == 200 ){
                    
-                    self.view?.showSuccess(msg: "send verification code successfully .. ")
+                    self.view?.showSuccess(msg: "send verification code successfully .. ".localized)
                       self.view?.GoToResetPasswordScreen()
                 
                 }else{
-                    self.view?.showError(error: value.key.localized())
+                    self.view?.showError(error: value.key.localized)
                     
                     
                     

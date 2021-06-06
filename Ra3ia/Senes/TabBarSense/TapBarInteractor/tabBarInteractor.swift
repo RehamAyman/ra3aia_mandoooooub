@@ -31,6 +31,7 @@ enum TabBarinteractor: URLRequestBuilder {
     case delegateSingleRoom(id:Int)
     case deleteBank( id : Int)
     case updatePassword( current_password : String , password : String )
+    case uploadFile
     
 
     
@@ -93,6 +94,8 @@ enum TabBarinteractor: URLRequestBuilder {
             return .deleteBank
         case .updatePassword:
             return .updatePassword
+        case .uploadFile:
+            return .uploadFile
             
             
             
@@ -109,7 +112,7 @@ enum TabBarinteractor: URLRequestBuilder {
         
         // 3
 
-        case .rate,.social,.about , .agreaments , .wallet , .profile , .delegateHome , .ShipmentDetails , .orders, .bankAccounts , .FinAccount , .rooms , .notifications , .delegateSingleRoom :
+        case .rate,.social,.about , .agreaments , .wallet , .profile , .delegateHome , .ShipmentDetails , .orders, .bankAccounts , .FinAccount , .rooms , .notifications , .delegateSingleRoom , .uploadFile:
             break
           
         case .UpdateProfile(fname: let fname , lname: let lname, email: let email, phone: let phone):
@@ -214,7 +217,7 @@ enum TabBarinteractor: URLRequestBuilder {
     // 4
     internal var method: HTTPMethod {
         switch self {
-        case .rate,.social,.about,.agreaments, .wallet , .profile , .delegateHome , .ShipmentDetails, .orders , .bankAccounts , .FinAccount , .rooms , .notifications , .delegateSingleRoom :
+        case .rate,.social,.about,.agreaments, .wallet , .profile , .delegateHome , .ShipmentDetails, .orders , .bankAccounts , .FinAccount , .rooms , .notifications , .delegateSingleRoom  :
             return .get
         default:
             return .post

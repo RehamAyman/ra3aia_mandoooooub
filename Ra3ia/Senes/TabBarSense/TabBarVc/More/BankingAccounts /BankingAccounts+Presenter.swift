@@ -54,7 +54,7 @@ extension bankAccountsVC : bankingAccountView {
 
     func ShowAlert(id: Int) {
         let alert = UIAlertController()
-        alert.customAlert(title: "Delete".localized(), message:"Are you sure you want to delete this bank?".localized() )
+        alert.customAlert(title: "Delete".localized, message:"Are you sure you want to delete this bank?".localized )
 //        let height:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 250)
 //        alert.view.addConstraint(height);
         

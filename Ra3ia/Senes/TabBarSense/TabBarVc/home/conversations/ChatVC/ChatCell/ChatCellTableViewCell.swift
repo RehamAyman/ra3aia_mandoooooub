@@ -1,9 +1,11 @@
 //
-//  chaatCell.swift
-//  Ra3ia
+//  ChatCellTableViewCell.swift
+//  SeaTrips
 //
-//  Created by Reham Ayman on 5/28/21.
+//  Created by Sara Mady on 03/12/2020.
+//  Copyright © 2020 Sara Ashraf. All rights reserved.
 //
+
 import UIKit
 
 class ChatCellTableViewCell: UITableViewCell ,ChatCellView{

@@ -65,7 +65,7 @@ class registerByImgs {
     func viewDidLoad () {
         self.view?.shownavBar()
     }
-    
+    // 11 
     
     func RegisterNewDelegate(fname:String,lname:String,email:String,phone:String,password:String,carType : String ,address : String , Images : [UploadData]) {
         view?.showIndicator()

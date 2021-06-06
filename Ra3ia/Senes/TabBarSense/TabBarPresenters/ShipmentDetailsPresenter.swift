@@ -17,6 +17,15 @@ protocol shipmentDetailsView : class {
     func showSuccessMessage ( msg : String)
     func featchData()
     func setupCollection ()
+    func setUpViews ()
+    func ChangeButtonsWhenStartTap()
+    func backToHome ()
+    func gotoWithdrawalVC ()
+    func changeButtonsWhenRechRecAdd ()
+    func changeBtnsWhenPackageRec ()
+    func changeBtnsWhenGoBack ()
+    func changeBtnsWhenRechedBackClient()
+    
     
     
 }
@@ -94,10 +103,32 @@ class ShipmentPresenter  {
     
     
     
-    //////////////////////
-    func sendAcceptOrder(id : Int){
+    
+    func sendChangeOrder(id : String , status : String ){
         view?.showIndicator()
-        TabBarinteractor.acceptOrder(id: id).send(DefaultResponse.self){
+        TabBarinteractor.changeOrderStatus(id: id, status: status).send(DefaultResponse.self){
+            [weak self] (response) in
+            guard let self = self else { return }
+            self.view?.hideIndicator()
+            switch response {
+            case .unAuthorized(_):
+                print("unAuthorized")
+            case .failure(let error):
+                print("failure\(String(describing: error))")
+            case .success(let value):
+                self.view?.showSuccessMessage(msg: value.msg ?? "")
+             
+              
+            case .errorResponse(let error):
+                guard let errorMessage = error as? APIError else { return  showNoInterNetAlert()}
+                self.view?.showError(error: errorMessage.localizedDescription.localized)
+            }
+        }
+    }
+    
+    func sendFinishOrder(id : String ){
+        view?.showIndicator()
+        TabBarinteractor.finishOrder(id: id).send(DefaultResponse.self){
             [weak self] (response) in
             guard let self = self else { return }
             self.view?.hideIndicator()
@@ -109,7 +140,7 @@ class ShipmentPresenter  {
             case .success(let value):
                 self.view?.showSuccessMessage(msg: value.msg ?? "")
                 
-                self.view?.gotoAddOfferVc()
+                self.view?.backToHome()
                 
                 
             case .errorResponse(let error):
@@ -119,6 +150,10 @@ class ShipmentPresenter  {
         }
     }
     
+   
+    func goToWithdrawal () {
+        self.view?.gotoWithdrawalVC()
+    }
     
     
 }

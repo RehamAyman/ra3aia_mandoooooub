@@ -52,11 +52,11 @@ class resetPasswordPresenter {
                 
                 if(value.code == 200 ){
                    
-                    self.view?.showSuccess(msg: value.msg?.localized() ?? "" )
+                    self.view?.showSuccess(msg: value.msg?.localized ?? "" )
                       self.view?.goToLoginScreen()
                 
                 }else{
-                    self.view?.showError(error: value.msg?.localized() ?? "" )
+                    self.view?.showError(error: value.msg?.localized ?? "" )
                     
                     
                     
@@ -75,7 +75,7 @@ class resetPasswordPresenter {
             
             if ( password != newPassword  ) {
                 
-                showWarningAlert(title: "", message: "Password and confirm password must be match. ".localized())
+                showWarningAlert(title: "", message: "Password and confirm password must be match. ".localized)
                 
             } else {
                 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PopMenu
 
 class LanguageVC: UIViewController {
    
@@ -16,10 +17,7 @@ class LanguageVC: UIViewController {
     
 //    var presenter : languageVCPresenter!
     var presenter : languageVcPresenter!
-    let LanguagePicker = UIPickerView()
-    var PiCklanguages = ["English", "العربيه"]
-    var CurrentLanguage = 0
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +35,10 @@ class LanguageVC: UIViewController {
     
    
     
+    @IBAction func selectLng(_ sender: UIButton) {
+        presenter.setUpPOPUp()
+        
+    }
     
 
 }

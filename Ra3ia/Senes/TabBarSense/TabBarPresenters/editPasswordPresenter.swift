@@ -57,11 +57,11 @@ class editPasswordPresenter {
                 
                 if(value.code == 200 ){
                    
-                    self.view?.showSuccess(msg: value.msg?.localized() ?? "" )
+                    self.view?.showSuccess(msg: value.msg?.localized ?? "" )
                       self.view?.BackHome()
                 
                 }else{
-                    self.view?.showError(error: value.msg?.localized() ?? "" )
+                    self.view?.showError(error: value.msg?.localized ?? "" )
                     
                     
                     
@@ -80,10 +80,10 @@ class editPasswordPresenter {
             
             if ( currentPassword == newPassword  ) {
                 
-                showWarningAlert(title: "", message: "you enterd same current and new password  ".localized())
+                showWarningAlert(title: "", message: "you enterd same current and new password  ".localized)
                 
             } else if (newPassword != confirmNewPassword){
-                showWarningAlert(title: "", message: "Password and confirm password must be match!" .localized())
+                showWarningAlert(title: "", message: "Password and confirm password must be match!" .localized)
             }
             
             

@@ -15,7 +15,8 @@ struct SocketConnection {
     public var socket: SocketIOClient
     //marsol-aait.4hoste.com
     private init() {
-        manager = SocketManager(socketURL: URL(string: "https://seazone.4hoste.com:4517")!, config: [.log(false)])
+        manager = SocketManager(socketURL: URL(string: "https://raaia.4hoste.com:4549")!, config: [.log(false)])
         socket = manager.defaultSocket
     }
 }
+

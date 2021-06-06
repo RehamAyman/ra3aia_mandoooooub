@@ -8,8 +8,10 @@
 import Foundation
 import SKActivityIndicatorView
 import ViewAnimator
+import SafariServices
 
-extension finincialAccountVC : finincialAccView {
+
+extension finincialAccountVC : finincialAccView , SFSafariViewControllerDelegate {
     func showIndicator() {
         SKActivityIndicator.show()
     }
@@ -24,6 +26,7 @@ extension finincialAccountVC : finincialAccView {
         self.tableview.reloadData()
         let fromAnimation = AnimationType.vector(CGVector(dx: 40, dy: 0))
         UIView.animate(views: tableview.visibleCells, animations: [fromAnimation], duration: 0.6 )
+        self.SetAllurl = FininalAccountData.payment_url
     }
     
     func showError(error: String) {
@@ -38,9 +41,16 @@ extension finincialAccountVC : finincialAccView {
     
     
     func gotoSelectPayMethodVC() {
-        let vc = Storyboard.Main.viewController(SelectPayMtehodVC.self)
+        let vc = Storyboard.Main.viewController(selectPaymentMethodVC.self)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+   
+    func openSetallUrl() {
+        if let url = URL(string: SetAllurl) {
+                let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+                vc.delegate = self
+                present(vc, animated: true)
+            }
+    }
 }

@@ -54,30 +54,31 @@ class MoreVcPresenter {
     
    private var imagesArray = ["acc","language","fain", "baank" , "walllet" , "bills" , "rates","phone" ,"terms" ,"shkwa" ,"logout"]
     
-   private var mainLabelsArray = ["Personal data",
-                           "Language",
-                           "Financial accounts",
-                           "Bank accounts",
-                           "My wallet",
-                           "My bills",
-                           "My review",
-                           "Call Us",
-                           "Usage policy",
-                           "Complaints and suggestions",
-                           "Log Out"]
+    private var mainLabelsArray = ["Personal data".localized,
+                                   "Language".localized,
+                                   "Financial accounts".localized,
+                                   "Bank accounts".localized,
+                                   "My wallet".localized,
+                                   "My bills".localized,
+                                   "My review".localized,
+                                   "Call Us".localized,
+                                   "Usage policy".localized,
+                                   "Complaints and suggestions".localized,
+                                   "Log Out".localized
+    ]
     
-   private var DetailsLabelsArray = ["personal information",
-                              "Language control",
-                              "You can pay the app commission from here",
-                              "You can add your bank accounts from here",
-                              "You can see your balance" ,
-                              "Financial movements of the buying and selling process",
-                              "You can see your review from here",
-                              "Is there a problem? We will help you solve it" ,
+    private var DetailsLabelsArray = ["personal information".localized,
+                                      "Language control".localized,
+                                      "You can pay the app commission from here".localized,
+                                      "You can add your bank accounts from here".localized,
+                                      "You can see your balance".localized ,
+                                      "Financial movements of the buying and selling process".localized,
+                                      "You can see your review from here".localized,
+                                      "Is there a problem? We will help you solve it".localized ,
                               
-                              "Any terms and conditions are updated in the application",
-                              "Send your complaint or suggestion from here",
-                              "You can logOut your account from here"
+                                      "Any terms and conditions are updated in the application".localized,
+                                      "Send your complaint or suggestion from here".localized,
+                                      "You can logOut your account from here".localized
                            
                               
     ]
@@ -94,7 +95,7 @@ class MoreVcPresenter {
         return mainLabelsArray.count
     }
     
-    func configure(cell: MoreCellsView, for index: Int) {
+    func configure(cell: MoreSettingCell, for index: Int) {
         cell.displayMainLabel(name: self.mainLabelsArray[index])
         cell.displayDetails(name: self.DetailsLabelsArray[index])
         cell.displayImage(image: self.imagesArray[index])

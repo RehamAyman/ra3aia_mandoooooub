@@ -89,6 +89,44 @@ class API: NSObject {
             }
         }
     }
+    
+    
+    /// POST Image To Server with keys
+    class func POSTSound(url: String, sound: Data?,Keys: String?,header:[String:Any]?, parameters:[String: Any]?, completion: @escaping (_ succeeded: Bool, _ result: [String: AnyObject]) -> Void) {
+        //        KRProgressHUD.show()
+        upload(multipartFormData: { (multipartFromData) in
+            if parameters != nil{
+                for (key, value) in parameters! {
+                    multipartFromData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key)
+                }
+            }
+            if sound != nil{
+                //                for (img ,key) in zip(sound!,Keys!){
+                //                    multipartFromData.append(data: img, withName: key, fileName: "Image.jpg", mimeType: "image/jpg")
+                multipartFromData.append(sound!, withName: Keys!, fileName: "audio.3gp", mimeType: "audio/3gp")
+                //                }
+            }
+        }, usingThreshold: SessionManager.multipartFormDataEncodingMemoryThreshold, to: url , method: .post, headers: header as? HTTPHeaders) { (result) in
+            switch result {
+            case .failure(let error):
+                print(error)
+                completion(false, [:])
+            case .success(request: let upload, streamingFromDisk: _, streamFileURL: _):
+                upload.responseJSON(completionHandler: { (response) in
+                    switch response.result {
+                    case .success(let value):
+                        print("💰\(value)")
+                        completion(true,  value as! [String : AnyObject])
+                    //                        KRProgressHUD.dismiss()
+                    case .failure(let error):
+                        print(error)
+                        completion(false, [:])
+                        //                        KRProgressHUD.dismiss()
+                    }
+                })
+            }
+        }
+    }
 
 
 

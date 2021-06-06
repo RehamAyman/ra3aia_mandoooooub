@@ -11,9 +11,11 @@ import Foundation
 // protocols ]
 
 protocol LanguageView : class {
-    func setUpPicker ()
+   
     func changeLanguageToArabic()
     func changeLanguageToEnglish()
+    func setUpPopUp()
+    func setTextBidding()
    
 }
 
@@ -31,13 +33,16 @@ class languageVcPresenter {
     
     
     func viewDidLoad ()  {
-        self.view?.setUpPicker()
+        self.view?.setTextBidding()
     }
     func changeLaguageToArabic () {
         self.view?.changeLanguageToArabic()
     }
     func changeLanguageToEnglish() {
         self.view?.changeLanguageToEnglish()
+    }
+    func setUpPOPUp() {
+        self.view?.setUpPopUp()
     }
    
     

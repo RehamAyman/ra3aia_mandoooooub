@@ -9,6 +9,80 @@ import Foundation
 import SKActivityIndicatorView
 
 extension ShipmentdetailsVC : shipmentDetailsView {
+    func gotoWithdrawalVC() {
+        let vc = Storyboard.Main.viewController(withdrawalResoneVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func setUpViews() {
+        self.startStack.AddTOPCornersView(num: 25)
+        self.rechedRecAdd.AddTOPCorners(num: 25)
+        self.packageRecieved.AddTOPCorners(num: 25)
+        self.goBack.AddTOPCorners(num: 25)
+        self.rechedBackClient.AddTOPCorners(num: 25)
+        self.finishOrder.AddTOPCorners(num: 25)
+        
+        
+        self.startStack.isHidden = true
+        self.acceptStack.isHidden = true
+        self.rechedRecAdd.isHidden = true
+        self.packageRecieved.isHidden = true
+        self.goBack.isHidden = true
+        self.rechedBackClient.isHidden = true
+        self.finishOrder.isHidden = true
+        
+        
+        
+        // when come from home
+        if isComeFromHome == true {
+            acceptStack.isHidden = false
+            
+            
+         // when come from current order
+        } else if isOrderSelected == true {
+          
+            self.startStack.isHidden = false
+            
+            
+           // when come from completed order
+        } else if isComeFromCompletedOrder == true {
+        
+            
+           
+        }
+        
+        
+        
+        
+    }
+    
+    func ChangeButtonsWhenStartTap() {
+        self.backOutlet.isHidden = true
+        self.startStack.isHidden = true
+        self.rechedRecAdd.isHidden = false
+        
+    }
+    
+    func changeButtonsWhenRechRecAdd() {
+        self.rechedRecAdd.isHidden = true
+        self.packageRecieved.isHidden = false
+    }
+    
+    func changeBtnsWhenPackageRec() {
+        self.packageRecieved.isHidden = true
+        self.goBack.isHidden = false
+    }
+    func changeBtnsWhenGoBack() {
+        self.goBack.isHidden = true
+        self.rechedBackClient.isHidden = false
+    }
+    func changeBtnsWhenRechedBackClient() {
+        self.rechedBackClient.isHidden = true
+        self.finishOrder.isHidden = false
+    }
+    
+    
+    
     func featchData() {
         self.Collectionview.reloadData()
     }
@@ -63,5 +137,17 @@ extension ShipmentdetailsVC : shipmentDetailsView {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+    func backToHome() {
+        
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 ){
+                guard let window = UIApplication.shared.keyWindow else { return }
+                
+                let Vc = Storyboard.Main.viewController(HomeNavigationController.self)
+                
+                    window.rootViewController = Vc
+                }
+        
+    }
     
 }

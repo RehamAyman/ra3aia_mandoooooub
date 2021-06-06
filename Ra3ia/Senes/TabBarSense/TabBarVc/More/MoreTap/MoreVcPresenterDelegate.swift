@@ -45,15 +45,15 @@ extension MoreVC : MoreView {
 //        let alert = UIAlertController(title: "Sign Out".localized(), message: "Are you sure you want to log out?".localized(), preferredStyle: .alert)
 //
         let alert = UIAlertController()
-        alert.customAlert(title: "Sign Out".localized(), message:"Are you sure you want to log out?".localized() )
+        alert.customAlert(title: "Sign Out".localized, message:"Are you sure you want to log out?".localized )
         
             
             
             
-        alert.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { action in
             self.presenter.LogOutApp()
         }))
-        alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: { action in
+        alert.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel, handler: { action in
             
         }))
         

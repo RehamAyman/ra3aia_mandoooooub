@@ -16,6 +16,8 @@ extension Registervc : RegisterView , sendDataBackDelegate  {
         self.lng = lng
     }
     
+   
+    
     
     
     func gotoSelectLocation() {
@@ -27,13 +29,13 @@ extension Registervc : RegisterView , sendDataBackDelegate  {
     func passingDataToNextPage() {
         
         if firstName.text == "" || UserNameTextField.text == "" || PhoneNumField.text == "" || emailField.text == "" || AddressField.text == "" || PasswordField.text == "" || retypePasswordField.text == "" {
-            completData(title: "", message: "please complete your data !")
+            completData(title: "", message: "please complete your data !".localized)
         }
        else if checkMark.on == true{
             GotoNextPage()
           
         } else if checkMark.on == false {
-            showWarningAlert(title: "", message: "You must agree to the terms and conditions first".localized())
+            showWarningAlert(title: "", message: "You must agree to the terms and conditions first".localized)
         }
         
         
@@ -42,6 +44,9 @@ extension Registervc : RegisterView , sendDataBackDelegate  {
     }
     
     func gotoTermsScreen() {
+        
+        let vc = Storyboard.Main.viewController(UsagePolicyVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
         
         
         
@@ -67,7 +72,7 @@ extension Registervc : RegisterView , sendDataBackDelegate  {
         navigationController?.pushViewController(vc, animated: true)
         }  else {
             
-            showWarningAlert(title: "", message: "Password and confirm password must be match. ".localized())
+            showWarningAlert(title: "", message: "Password and confirm password must be match. ".localized)
            // showErrorAlert(title: "", message:"Password and confirm password must be match. ".localized() )
         }
         

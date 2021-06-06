@@ -152,7 +152,7 @@ class personalInfoVcPresenter {
                 print("failure\(String(describing: error))")
             case .success(let value):
                 User.currentUser = value.data
-                self.view?.showSuccessMsg(msg: "The data has been modified successfully")
+                self.view?.showSuccessMsg(msg: "The data has been modified successfully".localized)
             
             case .errorResponse(let error):
                 guard let errorMessage = error as? APIError else { return  showNoInterNetAlert()}

@@ -31,6 +31,8 @@ extension CallUsVC : CullUsView{
     }
     
     func openTwitter(link: String) {
+        print("=============")
+        print(link)
         if let url = URL(string: link) {
             UIApplication.shared.open(url)
         }

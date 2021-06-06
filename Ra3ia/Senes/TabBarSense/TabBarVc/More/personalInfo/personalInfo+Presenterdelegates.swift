@@ -159,9 +159,9 @@ extension personalInfoVC : personalinfoView {
        // self.phoneNumTxtField.layer.borderColor = UIColor.lightGray.cgColor
         self.lastNameTextField.layer.borderColor = UIColor.lightGray.cgColor
         
-        self.userNameTxtField.placeholder = "enter new user name ".localized()
-        self.emailTXtField.placeholder = "enter new phone number ".localized()
-        self.phoneNumTxtField.placeholder = "enter new email".localized()
+        self.userNameTxtField.placeholder = "enter new user name ".localized
+        self.emailTXtField.placeholder = "enter new phone number ".localized
+        self.phoneNumTxtField.placeholder = "enter new email".localized
         self.userNameTxtField.layer.applySketchShadow()
         self.lastNameTextField.layer.applySketchShadow()
        // self.phoneNumTxtField.layer.applySketchShadow()

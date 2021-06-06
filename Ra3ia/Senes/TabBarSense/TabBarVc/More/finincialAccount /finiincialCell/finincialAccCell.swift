@@ -25,19 +25,20 @@ class finincialAccCell: UITableViewCell , FinancialCellsView{
     }
     
     func displayPrice(price: String) {
-        self.cost.text = price + "S.R".localized()
+        self.cost.text = price + "S.R".localized
     }
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        selectionStyle = .none
 
     }
     
     
 
     @IBAction func stellmentButton(_ sender: UIButton) {
+        
     }
     
     

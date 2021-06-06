@@ -12,12 +12,33 @@ extension OrdersVC : OrdersView {
     func goToShipment(id: Int) {
         let vc = Storyboard.Main.viewController(ShipmentdetailsVC.self)
           vc.id = String(id)
-        vc.isOrderSelected = true
-       
-       
+        if SegmentOutlet.selectedSegmentIndex == 0 {
+            // current order
+            
+            
+            vc.isOrderSelected = true
+            vc.isComeFromHome = false
+            vc.isComeFromCompletedOrder = false
+        } else if SegmentOutlet.selectedSegmentIndex ==  1 {
+            
+            // complete order
+            
+            
+            vc.isComeFromCompletedOrder = true
+            vc.isOrderSelected = false
+            vc.isComeFromHome = false
+            
+        }
+        
+    
        
        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
+    
+    
+    
     
     func goToCLinicSHipment(id: Int) {
         let vc = Storyboard.Main.viewController(animalShipmentDetails.self)

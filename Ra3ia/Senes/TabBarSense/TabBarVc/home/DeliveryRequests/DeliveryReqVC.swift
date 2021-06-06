@@ -35,6 +35,14 @@ class DeliveryReqVC: UIViewController {
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        if(SocketConnection.sharedInstance.socket.status == .notConnected){
+            SocketConnection.sharedInstance.manager.connect()
+            SocketConnection.sharedInstance.socket.connect()
+        }
+        if(SocketConnection.sharedInstance.socket.status == .disconnected){
+            SocketConnection.sharedInstance.manager.connect()
+            SocketConnection.sharedInstance.socket.connect()
+        }
         
      
              
@@ -42,13 +50,9 @@ class DeliveryReqVC: UIViewController {
     print(DeliveryReqVC.UserLong ?? "nil")
         
         presenter = DeliveryReqVCPresenter(view: self)
-         presenter.viewDidload()
+        presenter.viewDidload()
      
        
-        
-        
-      
-
     }
   
     
@@ -79,13 +83,7 @@ class DeliveryReqVC: UIViewController {
         presenter.gotoConversationsScreen()
     }
     
-   
   
-  
-       
-  
-  
-    
 }
 
 extension DeliveryReqVC : CLLocationManagerDelegate {

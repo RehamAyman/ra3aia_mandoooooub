@@ -7,7 +7,11 @@
 
 import UIKit
 
-class OrdersDetailsCell: UITableViewCell , OrdersCellsView{
+class OrdersDetailsCell: UITableViewCell , OrdersCellsView {
+    func setRequestNum(num: String) {
+        self.requestNumber.text = num
+    }
+    
     func configCitiesDelivery() {
         detailsView.backgroundColor = .white
         toLocationLbl.textColor = .darkGray
@@ -16,6 +20,7 @@ class OrdersDetailsCell: UITableViewCell , OrdersCellsView{
         dateLabel.textColor = .darkGray
         dateIcon.image = UIImage(named: "clockb")
         dateIcon.tintColor = UIColor(named: "BaseColour")
+        requestNumber.textColor = UIColor(named: "BaseColour")
 
         
         animalIcon.image = UIImage(named: "boxor")
@@ -29,6 +34,9 @@ class OrdersDetailsCell: UITableViewCell , OrdersCellsView{
         FromLocationLbl.textColor = .white
         animalLabel.textColor = .white
         dateLabel.textColor = .white
+        requestNumber.textColor = .white
+        
+        
         dateIcon.image = UIImage(named: "clock")
         animalIcon.image = UIImage(named: "box")
         toLocIcon.image = UIImage(named: "noun_loca")
@@ -38,6 +46,7 @@ class OrdersDetailsCell: UITableViewCell , OrdersCellsView{
   
     //MARK: - outlets
     
+    @IBOutlet weak var requestNumber: UILabel!
     @IBOutlet weak var toLocationLbl: UILabel!
     @IBOutlet weak var FromLocationLbl: UILabel!
     @IBOutlet weak var dateLabel: UILabel!

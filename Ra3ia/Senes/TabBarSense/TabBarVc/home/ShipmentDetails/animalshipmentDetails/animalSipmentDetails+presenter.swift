@@ -32,7 +32,7 @@ extension animalShipmentDetails : AnimalshipmentDetailsView {
         self.cost.text = dataa.delivery_price
         if dataa.go_to_service_center_now == "true" {
             
-            self.orderStatus.text = "deliver Now"
+            self.orderStatus.text = "deliver Now".localized
 
         }
        

@@ -20,6 +20,13 @@ extension notificationsVC : UITableViewDelegate , UITableViewDataSource {
         
   //TODO: -   note : API ISSUE
         
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor.systemGray6
+            
+        } else {
+            cell.backgroundColor = #colorLiteral(red: 0.8728941083, green: 0.7903078794, blue: 0.6347703934, alpha: 1)
+        }
+        
         // if user accept the offer
         
             

@@ -52,6 +52,7 @@ enum ServerPaths: String {
     case delegateSingleRoom = "delegate-single-room"
     case deleteBank = "delegate-delete-bank-account"
     case updatePassword = "update-password"
+    case uploadFile = "upload-file"
   
 
     

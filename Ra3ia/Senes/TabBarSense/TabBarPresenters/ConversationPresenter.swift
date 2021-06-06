@@ -13,7 +13,6 @@ protocol conversationView : class {
     
     func setUptable()
     
-    func gotoChat()
     func showIndicator()
     func hideIndicator()
     func featchingData()
@@ -43,6 +42,7 @@ protocol conversationCellView  {
 class conversationsPresenter {
    private weak var view : conversationView?
    private var arrayRooms = [Rooms]()
+    var utils = AppUtils()
     
     //Rooms
     
@@ -58,24 +58,21 @@ class conversationsPresenter {
         
     }
     
-    func gotoChat() {
-        self.view?.gotoChat()
-    }
+   
     
     func viewDidLoad() {
         
         self.view?.setUptable()
+        self.view?.showIndicator()
+        self.getRoomsData()
     }
     
     
-    func DidSelectRow (index : Int) {
-        self.view?.gotoChat()
-        
-    }
+    
     func getRoomsCount() -> Int {
         return arrayRooms.count
     }
-    func configureROOMSCells(cell: conversationCellView, for index: Int) {
+    func configureROOMSCells(cell: ConversationCell, for index: Int) {
         
         cell.setRoomImage(image: arrayRooms[index].sender_avatar)
         cell.setTime(time: arrayRooms[index].last_message_created_at)
@@ -86,6 +83,10 @@ class conversationsPresenter {
     
     func getRoomsData(){
         view?.showIndicator()
+        
+        self.arrayRooms.removeAll()
+        
+        
         TabBarinteractor.rooms.send(ConversationRoomsModel.self){
             [weak self] (response) in
             guard let self = self else { return }

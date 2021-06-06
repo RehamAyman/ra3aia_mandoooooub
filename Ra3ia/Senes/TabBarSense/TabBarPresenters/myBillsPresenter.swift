@@ -54,8 +54,8 @@ class MyBillsPresenter {
     
     
     func configureBillsCells(cell: MyBillsCellView , for index: Int) {
-        cell.setRequestTpee(type: billsArray[index].type)
-        cell.setDateOfRequest(date: billsArray[index].created_at)
+        cell.setRequestTpee(type: billsArray[index].type_.localized)
+        cell.setDateOfRequest(date: billsArray[index].created_at.localized)
         cell.setRequestNumber(num: billsArray[index].id)
         cell.setCostOfRequest(cost: "//")
         

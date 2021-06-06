@@ -26,14 +26,19 @@ class conversationsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = conversationsPresenter(view: self)
-        presenter.viewDidLoad()
+         setUptable()
         
 
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        presenter.viewWillAppear()
+        presenter.getRoomsData()
+        SocketConnection.sharedInstance.socket.off("newMessage")
+        SocketConnection.sharedInstance.socket.emit("exitChat", with: []) {
+            print("added user id \(String(User.currentUser?.id ?? 0))")
+          
+        }
     }
     
     

@@ -18,7 +18,7 @@ class myBillsCell: UITableViewCell , MyBillsCellView {
     @IBOutlet weak var requestDate: UILabel!
     
     func setRequestNumber(num: Int) {
-        self.requestNum.text = "request num:".localized() + String(num)
+        self.requestNum.text = "request num:".localized + " " + String(num)
     }
     
     func setRequestTpee(type: String) {

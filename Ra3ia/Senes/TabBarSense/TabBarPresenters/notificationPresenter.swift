@@ -60,11 +60,11 @@ class  NotificatonPresenter {
   
     func configureRecipesCells(cell: notificationCell, for index: Int) {
         cell.setTitle(title: self.NotificatonArray[index].content)
-        if  NotificatonArray[index].type == "delegateAcceptOrder" {
-            cell.configuerAcceptNotification()
-        } else {
-            cell.configuerDefualt()
-        }
+//        if  NotificatonArray[index].type == "delegateAcceptOrder" {
+//            cell.configuerAcceptNotification()
+//        } else {
+//            cell.configuerDefualt()
+//        }
     }
     
     func getNotifactionsData(){

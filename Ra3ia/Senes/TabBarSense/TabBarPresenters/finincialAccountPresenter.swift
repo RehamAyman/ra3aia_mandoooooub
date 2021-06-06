@@ -16,6 +16,7 @@ protocol finincialAccView : class {
     func hideIndicator()
     func FeatchData(FininalAccountData:FinAccountData)
     func showError(error: String )
+    func openSetallUrl()
     
 }
 
@@ -81,4 +82,7 @@ class finincialAccPresenter {
             }
         }
     }
+    
+    
+    
 }

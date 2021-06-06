@@ -33,6 +33,8 @@
 	<string>Will you allow this app to always know your location,to get near places for you?</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Will you allow this app to always know your location,to get near places for you?</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Will you allow this app to always know your location,to get near places for you?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Will you allow this app to always know your location,to get near places for you?</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -53,7 +55,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationUsageDescription</key>
-	<string>Will you allow this app to always know your location,to get near places for you?</string>
 </dict>
 </plist>

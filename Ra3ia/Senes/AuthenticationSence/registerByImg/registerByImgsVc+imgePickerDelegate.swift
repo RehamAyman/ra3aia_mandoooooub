@@ -29,9 +29,7 @@ extension registerByImgsVC : UIImagePickerControllerDelegate , UINavigationContr
                 self.IDPic.image = image
                 
                 uploadImge.append(UploadData(data: (image).pngData()! as Data, fileName: "Image.jpg", mimeType: "image/jpg", name: "id_image"))
-                
-                
-                
+             
             } else if picker == vhicelPicker {
                 
                 self.vehiclePic.image = image

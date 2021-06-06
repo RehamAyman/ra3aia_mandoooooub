@@ -45,6 +45,7 @@ struct User : Codable {
     let car_image : String?
     let licence_image : String?
     let car_type : String?
+    let googlekey : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -75,6 +76,7 @@ struct User : Codable {
         case car_image = "car_image"
         case licence_image = "licence_image"
         case car_type = "car_type"
+        case googlekey = "googlekey"
     }
 
     init(from decoder: Decoder) throws {
@@ -106,6 +108,7 @@ struct User : Codable {
         car_image = try values.decodeIfPresent(String.self, forKey: .car_image)
         licence_image = try values.decodeIfPresent(String.self, forKey: .licence_image)
         car_type = try values.decodeIfPresent(String.self, forKey: .car_type)
+        googlekey =  try values.decodeIfPresent(String.self, forKey: .googlekey)
     }
 
 }
